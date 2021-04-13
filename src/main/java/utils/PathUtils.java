@@ -12,13 +12,20 @@ public class PathUtils {
 	}
 
 	public static String getFilePathFromResourcesFolder(String filename) {
-		Path resourcesPath = Paths
+		Path cwd = Paths
 				// get current relative path
 				.get("")
 				// get current working directory
-				.toAbsolutePath()
-				// get resource folder path
-				.resolve(Constants.MAIN_RESOURCES_PATH);
+				.toAbsolutePath();
+
+		// The cwd changes depending where the code was called for compilation.
+		if (cwd.getFileName().toString().equals("java")) {
+			for (int i = 0; i < 3; i++) {
+				cwd = cwd.getParent();
+			}
+		}
+
+		Path resourcesPath = cwd.resolve(Constants.MAIN_RESOURCES_PATH);
 
 		String filePath = "";
 		try (Stream<Path> stream = Files.walk(resourcesPath, Integer.MAX_VALUE)) {
