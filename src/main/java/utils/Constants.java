@@ -1,3 +1,5 @@
-﻿public class Constants {
-	public final static String RESOURCES_PATH = "src/main/resources";
+﻿package utils;
+
+public class Constants {
+	public final static String MAIN_RESOURCES_PATH = "src/main/resources";
 }
