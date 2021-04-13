@@ -1,4 +1,4 @@
-﻿package core.gameplay.models;
+package core.gameplay.models;
 
 public class Score {
 	//region Private Fields
