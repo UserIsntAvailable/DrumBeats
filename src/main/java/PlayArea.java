@@ -1,6 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import utils.Constants;
-import utils.PathUtils;
 
 public class PlayArea extends World {
 	public PlayArea() {
@@ -9,6 +8,10 @@ public class PlayArea extends World {
 
 	@Override
 	public void started() {
-		super.setBackground(PathUtils.getFilePathFromResourcesFolder("play_area_default.png"));
+		super.setBackground(
+				new GreenfootImage("",
+						0,
+						null,
+						Color.BLACK));
 	}
 }
