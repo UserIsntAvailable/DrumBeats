@@ -1,9 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import utils.Constants;
 import utils.PathUtils;
 
 public class PlayArea extends World {
 	public PlayArea() {
-		super(1280, 720, 1);
+		super(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, 1);
 	}
 
 	@Override
