@@ -19,10 +19,8 @@ public class PathUtils {
 				.toAbsolutePath();
 
 		// The cwd changes depending where the code was called for compilation.
-		if (cwd.getFileName().toString().equals("java")) {
-			for (int i = 0; i < 3; i++) {
-				cwd = cwd.getParent();
-			}
+		while (!cwd.getFileName().toString().equals(Constants.PKG_NAME)) {
+			cwd = cwd.getParent();
 		}
 
 		Path resourcesPath = cwd.resolve(Constants.MAIN_RESOURCES_PATH);
