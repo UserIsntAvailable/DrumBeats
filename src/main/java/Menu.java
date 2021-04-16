@@ -11,7 +11,7 @@ public class Menu extends World {
 
 	@Override
 	public void started() {
-		super.setBackground(PathUtils.getFilePathFromResourcesFolder("menu.png"));
+		super.setBackground(PathUtils.getFilePathFromResourcesFolder(Constants.MAIN_RESOURCES_PATH,"menu.png"));
 		prepareWorld();
 	}
 
