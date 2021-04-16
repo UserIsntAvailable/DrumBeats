@@ -1,4 +1,4 @@
-﻿package utils;
+package utils;
 
 import core.gameplay.models.Map;
 import core.graphics.Drawable;

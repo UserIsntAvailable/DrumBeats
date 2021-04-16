@@ -11,7 +11,12 @@ public class Menu extends World {
 
 	@Override
 	public void started() {
-		super.setBackground(PathUtils.getFilePathFromResourcesFolder(Constants.MAIN_RESOURCES_PATH,"menu.png"));
+		super.setBackground(Drawable.DrawRectangle(
+				Constants.SCREEN_WIDTH,
+				Constants.SCREEN_HEIGHT,
+				new Color(255, 255, 255),
+				"", null, null)
+		);
 		prepareWorld();
 	}
 

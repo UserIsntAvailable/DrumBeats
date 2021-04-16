@@ -6,10 +6,9 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 class PathUtilsTests {
 	@ParameterizedTest
-	@ValueSource(strings = {"menu.png"})
+	@ValueSource(strings = {"menu.png", "PeppyMap.json"})
 	void getFilePathFromResourcesFolder_ShouldReturnFilePath_WhenFileExists(String filename) {
-		// TODO - Move to the test resources folder
-		String expected = PathUtils.getFilePathFromResourcesFolder(Constants.MAIN_RESOURCES_PATH, filename);
+		String expected = PathUtils.getFilePathFromResourcesFolder(Constants.TEST_RESOURCES_PATH, filename);
 
 		Assertions.assertTrue(expected.contains(filename));
 	}
