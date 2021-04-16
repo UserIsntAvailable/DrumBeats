@@ -2,6 +2,7 @@ import core.graphics.Drawable;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import utils.Constants;
 import utils.PathUtils;
+import utils.WorldUtils;
 
 public class Menu extends World {
 	public Menu() {
@@ -11,12 +12,7 @@ public class Menu extends World {
 
 	@Override
 	public void started() {
-		super.setBackground(Drawable.DrawRectangle(
-				Constants.SCREEN_WIDTH,
-				Constants.SCREEN_HEIGHT,
-				new Color(255, 255, 255),
-				"", null, null)
-		);
+		super.setBackground(WorldUtils.createWorldBackground(new Color(43, 43, 43)));
 		prepareWorld();
 	}
 
