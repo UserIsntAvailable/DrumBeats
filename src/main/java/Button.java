@@ -1,12 +1,21 @@
+import core.graphics.Drawable;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class Button extends Actor {
-	private String _text;
-	private static GreenfootImage _image;
+import java.util.function.Consumer;
 
-	public Button(String text, GreenfootImage image) {
-		_text = text;
-		_image = image;
+
+public class Button extends Actor {
+	// I will keep the image just in case that I need it later
+	private final GreenfootImage _image;
+	private final Consumer<World> _action;
+
+	public Button(int width, int height, Color background,
+	              String text, Font font, Color textColor,
+	              Consumer<World> action) {
+		_action = action;
+		_image = Drawable.DrawRectangle(width, height, background, text, font, textColor);
+
+		setImage(_image);
 	}
 
 	/**
@@ -14,6 +23,9 @@ public class Button extends Actor {
 	 * the 'Act' or 'Run' button gets pressed in the environment.
 	 */
 	public void act() {
-		
+		if (Greenfoot.mouseClicked(this)) {
+			// TODO - Refactor this into a Event Listener that changes the actors on screen depending on what button is clicked
+			_action.accept(new PlayArea());
+		}
 	}
 }

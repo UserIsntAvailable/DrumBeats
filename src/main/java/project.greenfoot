@@ -1,10 +1,13 @@
 #Greenfoot project file
+dependency1.from=Menu
+dependency1.to=Button
+dependency1.type=UsesDependency
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
 height=1096
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=3
 project.charset=UTF-8
 publish.hasSource=true
