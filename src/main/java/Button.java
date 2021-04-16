@@ -1,5 +1,6 @@
 import core.graphics.Drawable;
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import utils.PlayAreaFactory;
 
 import java.util.function.Consumer;
 
@@ -25,7 +26,7 @@ public class Button extends Actor {
 	public void act() {
 		if (Greenfoot.mouseClicked(this)) {
 			// TODO - Refactor this into a Event Listener that changes the actors on screen depending on what button is clicked
-			_action.accept(new PlayArea());
+			_action.accept(PlayAreaFactory.createPlayAreaWorldFromMap(null));
 		}
 	}
 }
