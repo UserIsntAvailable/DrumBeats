@@ -1,24 +1,26 @@
 package core.gameplay.models;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Map {
 	//region Private Fields
 	private final String _name;
-	private final String _backgroundImagePath;
-	private final String _songName;
+	private final String _backgroundPath;
+	private final String _songPath;
 	private final String _artist;
-	private final String _length;
 	private final ArrayList<Score> _scores;
+
+	// TODO - Calculate it from the notes of the map or song length
+	private String _length = "";
 	//endregion
 
 	//region Constructor
-	public Map(String name, String backgroundImagePath, String songName, String artist, String length) {
+	public Map(String name, String artist, String songPath, String backgroundPath) {
 		_name = name;
-		_backgroundImagePath = backgroundImagePath;
-		_songName = songName;
 		_artist = artist;
-		_length = length;
+		_songPath = songPath;
+		_backgroundPath = backgroundPath;
 
 		_scores = new ArrayList<>();
 	}
@@ -29,12 +31,12 @@ public class Map {
 		return _name;
 	}
 
-	public String getBackgroundImagePath() {
-		return _backgroundImagePath;
+	public String getBackgroundPath() {
+		return _backgroundPath;
 	}
 
-	public String getSongName() {
-		return _songName;
+	public String getSongPath() {
+		return _songPath;
 	}
 
 	public String getArtist() {
@@ -51,6 +53,24 @@ public class Map {
 	//endregion
 
 	//region Public Methods
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Map map = (Map) o;
+		return _name.equals(map._name)
+				&& _backgroundPath.equals(map._backgroundPath)
+				&& _songPath.equals(map._songPath)
+				&& _artist.equals(map._artist)
+				&& _scores.equals(map._scores)
+				&& _length.equals(map._length);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(_name, _backgroundPath, _songPath, _artist, _scores, _length);
+	}
+
 	public void addScore(Score score) {
 		_scores.add(score);
 	}
