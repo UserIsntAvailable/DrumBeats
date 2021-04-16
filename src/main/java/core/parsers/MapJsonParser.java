@@ -16,20 +16,23 @@ public class MapJsonParser {
 		try {
 			Scanner in = new Scanner(new FileReader(jsonFilePath));
 			StringBuilder sb = new StringBuilder();
-			while(in.hasNext()) {
+			while (in.hasNext()) {
 				sb.append(in.next());
 			}
 			in.close();
 			jsonText = sb.toString();
 
-		}
-		catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 		JSONObject obj = new JSONObject(jsonText);
-		String jsonString = obj.toString();
-		
-		return new Map("", "", "", "", "");
+
+		return new Map(
+				obj.getString("Name"),
+				obj.getString("Artist"),
+				obj.getString("SongPath"),
+				obj.getString("BackgroundPath")
+		);
 	}
 }
