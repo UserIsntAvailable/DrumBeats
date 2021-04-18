@@ -1,4 +1,4 @@
-package utils;
+package core.utils;
 
 import core.graphics.Drawable;
 import greenfoot.Color;

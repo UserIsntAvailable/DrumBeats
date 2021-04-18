@@ -1,4 +1,4 @@
-package utils;
+package core.utils;
 
 import core.models.Map;
 import greenfoot.Color;

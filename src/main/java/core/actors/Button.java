@@ -2,7 +2,7 @@ package core.actors;
 
 import core.graphics.Drawable;
 import greenfoot.*;
-import utils.PlayAreaFactory;
+import core.utils.PlayAreaFactory;
 
 import java.util.function.Consumer;
 

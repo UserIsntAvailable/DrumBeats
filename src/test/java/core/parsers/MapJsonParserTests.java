@@ -3,8 +3,8 @@ package core.parsers;
 import core.models.Map;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import utils.Constants;
-import utils.PathUtils;
+import core.utils.Constants;
+import core.utils.PathUtils;
 
 class MapJsonParserTests {
 	@Test

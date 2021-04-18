@@ -4,8 +4,8 @@ import greenfoot.Color;
 import greenfoot.Font;
 import greenfoot.Greenfoot;
 import greenfoot.World;
-import utils.Constants;
-import utils.WorldUtils;
+import core.utils.Constants;
+import core.utils.WorldUtils;
 import core.actors.Button;
 
 public class Menu extends World {
