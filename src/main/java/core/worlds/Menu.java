@@ -1,8 +1,12 @@
-import core.graphics.Drawable;
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+package core.worlds;
+
+import greenfoot.Color;
+import greenfoot.Font;
+import greenfoot.Greenfoot;
+import greenfoot.World;
 import utils.Constants;
-import utils.PathUtils;
 import utils.WorldUtils;
+import core.actors.Button;
 
 public class Menu extends World {
 	public Menu() {

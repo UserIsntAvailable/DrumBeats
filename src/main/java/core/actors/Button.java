@@ -1,5 +1,7 @@
+package core.actors;
+
 import core.graphics.Drawable;
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 import utils.PlayAreaFactory;
 
 import java.util.function.Consumer;
@@ -19,10 +21,6 @@ public class Button extends Actor {
 		setImage(_image);
 	}
 
-	/**
-	 * Act - do whatever the Button wants to do. This method is called whenever
-	 * the 'Act' or 'Run' button gets pressed in the environment.
-	 */
 	public void act() {
 		if (Greenfoot.mouseClicked(this)) {
 			// TODO - Refactor this into a Event Listener that changes the actors on screen depending on what button is clicked
