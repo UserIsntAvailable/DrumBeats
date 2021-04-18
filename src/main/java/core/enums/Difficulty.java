@@ -1,4 +1,4 @@
-package core.gameplay.enums;
+package core.enums;
 
 public enum Difficulty {
 	EASY,

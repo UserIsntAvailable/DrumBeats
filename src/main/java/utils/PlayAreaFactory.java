@@ -1,7 +1,6 @@
 package utils;
 
-import core.gameplay.models.Map;
-import core.graphics.Drawable;
+import core.models.Map;
 import greenfoot.Color;
 import greenfoot.World;
 

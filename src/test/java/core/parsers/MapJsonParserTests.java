@@ -1,6 +1,6 @@
 package core.parsers;
 
-import core.gameplay.models.Map;
+import core.models.Map;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import utils.Constants;

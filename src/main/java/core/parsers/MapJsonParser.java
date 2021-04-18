@@ -1,7 +1,7 @@
 package core.parsers;
 
 import org.json.*;
-import core.gameplay.models.Map;
+import core.models.Map;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

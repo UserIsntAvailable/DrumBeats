@@ -1,4 +1,4 @@
-package core.gameplay.models;
+package core.models;
 
 import java.util.ArrayList;
 import java.util.Objects;
