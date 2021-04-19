@@ -22,7 +22,7 @@ readme.y=10
 
 # Target definitions
 target1.height=50
-target1.name=GreenfootWorldEntryPoint
+target1.name=core.worlds.Menu
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
@@ -31,4 +31,4 @@ target1.x=0
 target1.y=0
 
 version=3.0.0
-world.lastInstantiated=GreenfootWorldEntryPoint
+world.lastInstantiated=core.worlds.Menu
