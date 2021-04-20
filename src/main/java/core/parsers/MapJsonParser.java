@@ -13,15 +13,12 @@ public class MapJsonParser {
 
 	public static Map parse(String jsonFilePath) {
 		String jsonText = "";
-		try {
-			Scanner in = new Scanner(new FileReader(jsonFilePath));
+		try (Scanner scanner = new Scanner(new FileReader(jsonFilePath))) {
 			StringBuilder sb = new StringBuilder();
-			while (in.hasNext()) {
-				sb.append(in.next());
+			while (scanner.hasNext()) {
+				sb.append(scanner.next());
 			}
-			in.close();
 			jsonText = sb.toString();
-
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
