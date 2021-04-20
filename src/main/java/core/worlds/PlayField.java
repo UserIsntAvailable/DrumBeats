@@ -1,4 +1,4 @@
-﻿package core.worlds;
+package core.worlds;
 
 import core.models.Map;
 import core.utils.Constants;
