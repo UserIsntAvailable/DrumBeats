@@ -10,7 +10,7 @@ public class WorldUtils {
 
 	public static GreenfootImage createWorldBackground(Color color) {
 		return Drawable.DrawRectangle(
-				Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, color,
+				Constants.APP_WIDTH, Constants.APP_HEIGHT, color,
 				"", null, null);
 	}
 }

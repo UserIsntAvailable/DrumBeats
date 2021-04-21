@@ -11,9 +11,8 @@ import greenfoot.Color;
 import greenfoot.World;
 
 public class PlayField extends World {
-	
 	public PlayField(Map map) {
-		super(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, 1, true);
+		super(Constants.APP_WIDTH, Constants.APP_HEIGHT, 1, true);
 		
 		addUIActors();
 		
@@ -24,50 +23,45 @@ public class PlayField extends World {
 	private void addUIActors() {
 		this.setBackground(WorldUtils.createWorldBackground(Color.BLACK));
 		
-		// THis is very messy, refactoring later....
-		
-		int width = Constants.SCREEN_WIDTH;
-		int height = Constants.SCREEN_HEIGHT;
-		
 		// Note rail
 		this.addObject(
 				new ImageHolder(Drawable.DrawRectangle(
-						width,height / 5,
+						Constants.APP_WIDTH,Constants.APP_HEIGHT / 5,
 						new Color(80,80,80, 60),
 						"",null,null)),
-				width / 2,
-				height / 2 + 40
+				Constants.APP_WIDTH / 2,
+				Constants.APP_HEIGHT / 2 + 40
 		);
 
-		addDrumsButtons(width, height);
+		addDrumsButtons();
 	}
 
-	private void addDrumsButtons(int width, int height) {
+	private void addDrumsButtons() {
 		// TODO - Be able to change the default keys
 		// TODO - Refactor this with a for loop and a list of KeyValuePair
 		
 		this.addObject(
 				new Drum(DrumType.OUTER, "d"),
-				width / 20,
-				height / 2 + 40
+				Constants.APP_WIDTH / 20,
+				Constants.APP_HEIGHT / 2 + 40
 		);
 
 		this.addObject(
 				new Drum(DrumType.INNER, "f"),
-				width / 20 + 50,
-				height / 2 + 40
+				Constants.APP_WIDTH / 20 + 50,
+				Constants.APP_HEIGHT / 2 + 40
 		);
 
 		this.addObject(
 				new Drum(DrumType.INNER, "j"),
-				width / 20 + 100,
-				height / 2 + 40
+				Constants.APP_WIDTH / 20 + 100,
+				Constants.APP_HEIGHT / 2 + 40
 		);
 
 		this.addObject(
 				new Drum(DrumType.OUTER, "k"),
-				width / 20 + 150,
-				height / 2 + 40
+				Constants.APP_WIDTH / 20 + 150,
+				Constants.APP_HEIGHT / 2 + 40
 		);
 	}
 }

@@ -11,7 +11,7 @@ import core.actors.Button;
 public class Menu extends World {
 	public Menu() {
 		// bounded = false because I will hide actors offscreen
-		super(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, 1, false);
+		super(Constants.APP_WIDTH, Constants.APP_HEIGHT, 1, false);
 	}
 
 	@Override
@@ -31,8 +31,8 @@ public class Menu extends World {
 						"", new Font(69), Color.RED,
 						(Greenfoot::setWorld)
 				),
-				Constants.SCREEN_WIDTH / 2,
-				Constants.SCREEN_HEIGHT / 2
+				Constants.APP_WIDTH / 2,
+				Constants.APP_HEIGHT / 2
 		);
 	}
 }
