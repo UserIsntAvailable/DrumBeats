@@ -9,7 +9,7 @@ import core.utils.WorldUtils;
 import core.actors.Button;
 
 public class Menu extends World {
-	private final Menu instance = new Menu();
+	private static final Menu instance = new Menu();
 	
 	private Menu() {
 		// bounded = false because I will hide actors offscreen
@@ -38,7 +38,7 @@ public class Menu extends World {
 		);
 	}
 
-	private Menu getInstance() {
+	private static Menu getInstance() {
 		return instance;
 	}
 }
