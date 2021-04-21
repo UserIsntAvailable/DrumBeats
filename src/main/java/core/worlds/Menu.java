@@ -9,11 +9,13 @@ import core.utils.WorldUtils;
 import core.actors.Button;
 
 public class Menu extends World {
-	public Menu() {
+	private final Menu instance = new Menu();
+	
+	private Menu() {
 		// bounded = false because I will hide actors offscreen
 		super(Constants.APP_WIDTH, Constants.APP_HEIGHT, 1, false);
 	}
-
+	
 	@Override
 	public void started() {
 		super.setBackground(WorldUtils.createWorldBackground(new Color(43, 43, 43)));
@@ -34,5 +36,9 @@ public class Menu extends World {
 				Constants.APP_WIDTH / 2,
 				Constants.APP_HEIGHT / 2
 		);
+	}
+
+	private Menu getInstance() {
+		return instance;
 	}
 }
