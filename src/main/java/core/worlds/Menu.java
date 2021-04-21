@@ -38,7 +38,7 @@ public class Menu extends World {
 		);
 	}
 
-	private static Menu getInstance() {
+	public static Menu getInstance() {
 		return instance;
 	}
 }
