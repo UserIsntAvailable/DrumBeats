@@ -1,18 +1,22 @@
 package core.actors;
 
 import core.enums.DrumType;
-import core.graphics.Drawable;
+import core.graphics.Drawer;
 import greenfoot.Actor;
 import greenfoot.Color;
 import greenfoot.Greenfoot;
 import greenfoot.GreenfootImage;
 
 public class Drum extends Actor {
+	private final int width;
+	private final int height;
 	private final DrumType type;
 	private final String key;
 	private final GreenfootImage currentImage = this.getImage();
 
-	public Drum(DrumType type, String key) {
+	public Drum(int width, int height, DrumType type, String key) {
+		this.width = width;
+		this.height = height;
 		this.type = type;
 		this.key = key;
 	}
@@ -22,32 +26,30 @@ public class Drum extends Actor {
 		if (Greenfoot.isKeyDown(key)) {
 			// TODO - I need to set up a ImageCache and get the images
 			// This is just for testing
-			Color color = null;
-			switch (type){
-				case INNER:
-					color = Color.RED;
-					break;
-				case OUTER:
-					color = Color.BLUE;
-					break;
-			}
-			GreenfootImage image = Drawable.DrawRectangle(
-					40,100,color,
-					"", null,null);
-			
-			if (!image.equals(currentImage)){
-				this.setImage(image);
-			}
-		}
-		else {
-			GreenfootImage image = Drawable.DrawRectangle(
-					40,100,
-					new Color(100,100,100, 50),
-					"", null,null);
-			
+			GreenfootImage image = Drawer.RectangleWithoutText(
+					width, height, getColorByDrumType());
+
 			if (!image.equals(currentImage)) {
 				this.setImage(image);
 			}
 		}
+		else {
+			GreenfootImage image = Drawer.RectangleWithoutText(
+					width, height, new Color(100, 100, 100, 50));
+
+			if (!image.equals(currentImage)) {
+				this.setImage(image);
+			}
+		}
+	}
+
+	private Color getColorByDrumType() {
+		switch (type) {
+			case INNER:
+				return Color.RED;
+			case OUTER:
+				return Color.BLUE;
+		}
+		return null;
 	}
 }
