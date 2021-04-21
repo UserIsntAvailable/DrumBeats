@@ -1,7 +1,6 @@
 package core.worlds;
 
 import core.utils.Constants;
-import core.utils.GifImage;
 import greenfoot.Greenfoot;
 import greenfoot.World;
 
@@ -18,7 +17,7 @@ public class Intro extends World {
 		// TODO - Add "SplashScreen" animation ( I will use a GifImage )
 		
 		// This is just for testing...
-		// FUCK GREENFOOT HE CAN SUCK MY DICK WITH THIS STUPID ERRORS
+		// FUCK GREENFOOT, IT CAN SUCK MY DICK WITH ITS STUPID ERRORS
 //		gifImage = new GifImage("pretty-gif.gif");
 	}
 
