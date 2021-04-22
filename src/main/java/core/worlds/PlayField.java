@@ -28,7 +28,7 @@ public class PlayField extends World {
 
 		int yPosition = Constants.APP_HEIGHT / 2 + 40;
 
-		// Note rail
+		// Notes rail
 		this.addObject(
 				new ImageHolder(Drawer.RectangleWithoutText(
 						Constants.APP_WIDTH,
@@ -42,7 +42,7 @@ public class PlayField extends World {
 	}
 
 	private void addDrumsButtons(int x, int y) {
-		// TODO - Be able to change the default keys
+		// TODO - Be able to change the default keys, by creating a Config where all is stored ( maybe rename Constants to Config? )
 		List<Pair<DrumType, String>> drumActors = List.of(
 				new Pair<>(DrumType.OUTER, "d"),
 				new Pair<>(DrumType.INNER, "f"),
