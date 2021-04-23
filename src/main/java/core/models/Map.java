@@ -5,50 +5,50 @@ import java.util.Objects;
 
 public class Map {
 	//region Private Fields
-	private final String _name;
-	private final String _backgroundPath;
-	private final String _songPath;
-	private final String _artist;
-	private final ArrayList<Score> _scores;
+	private final String name;
+	private final String backgroundPath;
+	private final String songPath;
+	private final String artist;
+	private final ArrayList<Score> scores;
 
 	// TODO - Calculate it from the notes of the map or song length
-	private String _length = "";
+	private String string = "";
 	//endregion
 
 	//region Constructor
 	public Map(String name, String artist, String songPath, String backgroundPath) {
-		_name = name;
-		_artist = artist;
-		_songPath = songPath;
-		_backgroundPath = backgroundPath;
+		this.name = name;
+		this.artist = artist;
+		this.songPath = songPath;
+		this.backgroundPath = backgroundPath;
 
-		_scores = new ArrayList<>();
+		scores = new ArrayList<>();
 	}
 	//endregion
 
 	//region Getters
 	public String getName() {
-		return _name;
+		return name;
 	}
 
 	public String getBackgroundPath() {
-		return _backgroundPath;
+		return backgroundPath;
 	}
 
 	public String getSongPath() {
-		return _songPath;
+		return songPath;
 	}
 
 	public String getArtist() {
-		return _artist;
+		return artist;
 	}
 
 	public String getLength() {
-		return _length;
+		return string;
 	}
 
 	public ArrayList<Score> getScores() {
-		return _scores;
+		return scores;
 	}
 	//endregion
 
@@ -58,25 +58,25 @@ public class Map {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Map map = (Map) o;
-		return _name.equals(map._name)
-				&& _backgroundPath.equals(map._backgroundPath)
-				&& _songPath.equals(map._songPath)
-				&& _artist.equals(map._artist)
-				&& _scores.equals(map._scores)
-				&& _length.equals(map._length);
+		return name.equals(map.name)
+				&& backgroundPath.equals(map.backgroundPath)
+				&& songPath.equals(map.songPath)
+				&& artist.equals(map.artist)
+				&& scores.equals(map.scores)
+				&& string.equals(map.string);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(_name, _backgroundPath, _songPath, _artist, _scores, _length);
+		return Objects.hash(name, backgroundPath, songPath, artist, scores, string);
 	}
 
 	public void addScore(Score score) {
-		_scores.add(score);
+		scores.add(score);
 	}
 
 	public void removeScore(Score score) {
-		_scores.remove(score);
+		scores.remove(score);
 	}
 	//endregion
 }
