@@ -9,12 +9,14 @@ import core.utils.PathUtils;
 class MapJsonParserTests {
 	@Test
 	void Parse_ShouldReturnMap_WhenJSONFileIsValid() {
-		final String actualMapFilePath = PathUtils.getFilePathFromResourcesFolder(Constants.TEST_RESOURCES_PATH, "PeppyMap.json");
+		final String actualMapFilePath = PathUtils.getFilePathFromResourcesFolder(
+				Constants.TEST_RESOURCES_PATH, "map_template.json");
+		
 		final Map actualMap = new Map(
-				"Peppy",
-				"Loves",
-				"Little",
-				"Kids"
+				"Random",
+				"Stuff",
+				"Right",
+				"Here"
 		);
 
 		Map expected = MapJsonParser.parse(actualMapFilePath);
