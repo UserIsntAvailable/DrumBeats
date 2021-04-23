@@ -3,7 +3,7 @@ package core.worlds;
 import core.actors.Drum;
 import core.actors.ImageHolder;
 import core.enums.DrumType;
-import core.graphics.Drawer;
+import core.graphics.ShapeDrawer;
 import core.models.Map;
 import core.utils.Constants;
 import core.utils.WorldUtils;
@@ -30,7 +30,7 @@ public class PlayField extends World {
 
 		// Notes rail
 		this.addObject(
-				new ImageHolder(Drawer.RectangleWithoutText(
+				new ImageHolder(ShapeDrawer.RectangleWithoutText(
 						Constants.APP_WIDTH,
 						Constants.APP_HEIGHT / 5,
 						new Color(80, 80, 80, 60))),

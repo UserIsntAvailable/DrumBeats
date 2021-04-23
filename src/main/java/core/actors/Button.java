@@ -1,6 +1,6 @@
 package core.actors;
 
-import core.graphics.Drawer;
+import core.graphics.ShapeDrawer;
 import core.worlds.PlayField;
 import greenfoot.*;
 
@@ -16,7 +16,7 @@ public class Button extends Actor {
 	              String text, Font font, Color textColor,
 	              Consumer<World> action) {
 		_action = action;
-		_image = Drawer.Rectangle(width, height, background, text, font, textColor);
+		_image = ShapeDrawer.Rectangle(width, height, background, text, font, textColor);
 
 		setImage(_image);
 	}
