@@ -2,6 +2,7 @@ package core.worlds;
 
 import core.actors.Drum;
 import core.actors.ImageHolder;
+import core.actors.NoteCatcher;
 import core.enums.DrumType;
 import core.graphics.ShapeDrawer;
 import core.models.Map;
@@ -39,6 +40,12 @@ public class PlayField extends World {
 		);
 
 		addDrumsButtons(Constants.APP_WIDTH / 20, yPosition);
+		
+		addObject(
+				new NoteCatcher(70),
+				300,
+				yPosition
+		);
 	}
 
 	private void addDrumsButtons(int x, int y) {
