@@ -2,5 +2,19 @@
     "Name": "Random",
     "Artist": "Stuff",
     "SongPath": "Right",
-    "BackgroundPath": "Here"
+    "BackgroundPath": "Here",
+    "Notes": [
+        {
+            "Time": 123,
+            "Type": 1
+        },
+        {
+            "Time": 1423,
+            "Type": 1
+        },
+        {
+            "Time": 1241,
+            "Type": 1
+        }
+    ]
 }
