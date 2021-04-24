@@ -5,16 +5,18 @@
     "BackgroundPath": "Here",
     "Notes": [
         {
-            "Time": 123,
+            "Time": 2000,
             "Type": 1
         },
         {
-            "Time": 1423,
-            "Type": 1
+            "Time": 4000,
+            "Type": 2,
+            "Params": "7000,"
         },
         {
-            "Time": 1241,
-            "Type": 1
+            "Time": 8000,
+            "Type": 4,
+            "Params": "10000,"
         }
     ]
 }
