@@ -6,7 +6,8 @@
     "Notes": [
         {
             "Time": 2000,
-            "Type": 1
+            "Type": 1,
+            "Params": "1,1,"
         },
         {
             "Time": 4000,
