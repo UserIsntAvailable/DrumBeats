@@ -1,0 +1,28 @@
+{
+    "Name": "Random",
+    "Artist": "Stuff",
+    "SongFileName": "Right",
+    "BackgroundFileName": "Here",
+    "ID": "ca2f76c6-a55e-11eb-bcbc-0242ac130002",
+    "SetID": "5a253e8e-4f5e-491b-8594-103284a4dd8d",
+    "Notes": [
+        {
+            "Time": 2000,
+            "Type": 1,
+            "ColorType": "2",
+            "Params": "0,"
+        },
+        {
+            "Time": 4000,
+            "Type": 2,
+            "ColorType": "1",
+            "Params": "1,7000,"
+        },
+        {
+            "Time": 8000,
+            "Type": 4,
+            "ColorType": "3",
+            "Params": "10000,"
+        }
+    ]
+}

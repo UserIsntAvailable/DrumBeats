@@ -10,14 +10,15 @@ class MapJsonParserTests {
 	@Test
 	void Parse_ShouldReturnMap_WhenJSONFileIsValid() {
 		final String actualMapFilePath = PathUtils.getFilePathFromResourcesFolder(
-				Constants.TEST_RESOURCES_PATH, "map_template.json");
+				Constants.TEST_RESOURCES_PATH, "map_template.map");
 		
 		final Map actualMap = new Map(
 				"Random",
 				"Stuff",
 				"Right",
-				"Here"
-		);
+				"Here",
+				"ca2f76c6-a55e-11eb-bcbc-0242ac130002",
+				"5a253e8e-4f5e-491b-8594-103284a4dd8d");
 
 		Map expected = MapJsonParser.parse(actualMapFilePath);
 

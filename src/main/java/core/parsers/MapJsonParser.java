@@ -28,8 +28,9 @@ public class MapJsonParser {
 		return new Map(
 				obj.getString("Name"),
 				obj.getString("Artist"),
-				obj.getString("SongPath"),
-				obj.getString("BackgroundPath")
-		);
+				obj.getString("SongFileName"),
+				obj.getString("BackgroundFileName"),
+				obj.getString("ID"),
+				obj.getString("SetID"));
 	}
 }

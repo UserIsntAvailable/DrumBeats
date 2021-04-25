@@ -6,21 +6,25 @@ import java.util.Objects;
 public class Map {
 	//region Private Fields
 	private final String name;
-	private final String backgroundPath;
-	private final String songPath;
+	private final String backgroundFileName;
+	private final String songFilename;
 	private final String artist;
+	private final String ID;
+	private final String setID;
 	private final ArrayList<Score> scores;
 
 	// TODO - Calculate it from the notes of the map or song length
-	private String string = "";
+	private String length = "";
 	//endregion
 
 	//region Constructor
-	public Map(String name, String artist, String songPath, String backgroundPath) {
+	public Map(String name, String artist, String songFilename, String backgroundFileName, String ID, String setID) {
 		this.name = name;
 		this.artist = artist;
-		this.songPath = songPath;
-		this.backgroundPath = backgroundPath;
+		this.songFilename = songFilename;
+		this.backgroundFileName = backgroundFileName;
+		this.ID = ID;
+		this.setID = setID;
 
 		scores = new ArrayList<>();
 	}
@@ -31,12 +35,12 @@ public class Map {
 		return name;
 	}
 
-	public String getBackgroundPath() {
-		return backgroundPath;
+	public String getBackgroundFileName() {
+		return backgroundFileName;
 	}
 
-	public String getSongPath() {
-		return songPath;
+	public String getSongFilename() {
+		return songFilename;
 	}
 
 	public String getArtist() {
@@ -44,11 +48,19 @@ public class Map {
 	}
 
 	public String getLength() {
-		return string;
+		return length;
 	}
 
 	public ArrayList<Score> getScores() {
 		return scores;
+	}
+
+	public String getID() {
+		return ID;
+	}
+
+	public String getSetID() {
+		return setID;
 	}
 	//endregion
 
@@ -59,16 +71,18 @@ public class Map {
 		if (o == null || getClass() != o.getClass()) return false;
 		Map map = (Map) o;
 		return name.equals(map.name)
-				&& backgroundPath.equals(map.backgroundPath)
-				&& songPath.equals(map.songPath)
+				&& backgroundFileName.equals(map.backgroundFileName)
+				&& songFilename.equals(map.songFilename)
 				&& artist.equals(map.artist)
+				&& ID.equals(map.ID)
+				&& setID.equals(map.setID)
 				&& scores.equals(map.scores)
-				&& string.equals(map.string);
+				&& length.equals(map.length);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, backgroundPath, songPath, artist, scores, string);
+		return Objects.hash(name, backgroundFileName, songFilename, artist, ID, setID, scores, length);
 	}
 
 	public void addScore(Score score) {
