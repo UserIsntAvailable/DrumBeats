@@ -1,4 +1,4 @@
-﻿package core.utils;
+package core.utils;
 
 import java.util.BitSet;
 import java.util.EnumSet;
@@ -18,14 +18,7 @@ public class EnumUtils {
 				.collect(Collectors.toCollection(() -> EnumSet.noneOf(enumType)));
 	}
 
-	public static <T extends Enum<T>> Enum<T> getEnumFromConstantValue(Class<T> enumType, int flag) throws Exception {
-		var values = getEnumValuesFromFlag(enumType, flag);
-
-		if (!(values.size() >= 2)) {
-			var value = values.stream().findFirst();
-			if (value.isPresent()) return value.get();
-		}
-
-		throw new Exception("You provided a wrong flag");
+	public static <T extends Enum<T>> T getEnumFromConstantValue(Class<T> enumType, int flag) {
+		return enumType.getEnumConstants()[flag];
 	}
 }
