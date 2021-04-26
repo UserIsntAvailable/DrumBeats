@@ -3,6 +3,7 @@ package core.models;
 import core.enums.NoteType;
 import core.enums.TaikoNote;
 
+import java.util.EnumSet;
 import java.util.Objects;
 
 public class Note {
@@ -21,7 +22,7 @@ public class Note {
 	/**
 	 * Note type, see:{@link NoteType}
 	 */
-	private final NoteType noteType;
+	private final EnumSet<NoteType> noteType;
 
 	/**
 	 * Comma separated extra parameters that will change depending on the note {@link TaikoNote}
@@ -30,7 +31,7 @@ public class Note {
 	//endregion
 
 	//region Constructor
-	public Note(int time, TaikoNote taikoNote, NoteType noteType, String params) {
+	public Note(int time, TaikoNote taikoNote, EnumSet<NoteType> noteType, String params) {
 		this.time = time;
 		this.taikoNote = taikoNote;
 		this.noteType = noteType;
@@ -47,7 +48,7 @@ public class Note {
 		return taikoNote;
 	}
 
-	public NoteType getNoteType() {
+	public EnumSet<NoteType> getNoteType() {
 		return noteType;
 	}
 
