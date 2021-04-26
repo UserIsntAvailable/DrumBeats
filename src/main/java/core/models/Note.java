@@ -65,7 +65,7 @@ public class Note {
 		Note note = (Note) o;
 		return time == note.time
 				&& taikoNote == note.taikoNote
-				&& noteType == note.noteType
+				&& noteType.equals(note.noteType)
 				&& params.equals(note.params);
 	}
 
