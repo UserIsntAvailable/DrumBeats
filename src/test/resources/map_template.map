@@ -8,20 +8,20 @@
     "Notes": [
         {
             "Time": 2000,
-            "Type": 1,
-            "ColorType": "2",
+            "TaikoNote": 1,
+            "NoteType": "2",
             "Params": "0,"
         },
         {
             "Time": 4000,
-            "Type": 2,
-            "ColorType": "1",
+            "TaikoNote": 2,
+            "NoteType": "1",
             "Params": "1,7000,"
         },
         {
             "Time": 8000,
-            "Type": 4,
-            "ColorType": "3",
+            "TaikoNote": 4,
+            "NoteType": "3",
             "Params": "10000,"
         }
     ]
