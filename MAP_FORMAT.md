@@ -20,7 +20,7 @@
 | Field | Value Type | Description |
 | :-- | :-- | :-- |
 | `Time` | Integer | Time when the object is to be hit, in milliseconds from the beginning of the map audio. |
-| `TaikoNote` | Integer | Taiko note type ( `1` = Circle, `2` = Slider, `4` = Spinner ) |
+| `TaikoNote` | Integer | Taiko note type ( `0` = Circle, `1` = Slider, `2` = Spinner ) |
 | `NoteType` | Integer | Note type ( `1` = Kat [ normally blue notes ], `2` = Don [ normally red notes ], `3` = Mix [ any color ] ) |
 | `Params` | String | Comma separated extra parameters that will change depending on the note `type` |
 

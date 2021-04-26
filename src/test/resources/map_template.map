@@ -8,19 +8,19 @@
     "Notes": [
         {
             "Time": 2000,
-            "TaikoNote": 1,
+            "TaikoNote": 0,
             "NoteType": "2",
             "Params": "0,"
         },
         {
             "Time": 4000,
-            "TaikoNote": 2,
+            "TaikoNote": 1,
             "NoteType": "1",
             "Params": "1,7000,"
         },
         {
             "Time": 8000,
-            "TaikoNote": 4,
+            "TaikoNote": 2,
             "NoteType": "3",
             "Params": "10000,"
         }
