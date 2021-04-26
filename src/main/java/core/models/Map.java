@@ -3,28 +3,61 @@ package core.models;
 import java.util.ArrayList;
 import java.util.Objects;
 
+// TODO - I can create a Hash property to know if the map was changed once created ( not really need it here tho )
 public class Map {
 	//region Private Fields
-	private final String name;
-	private final String backgroundFileName;
-	private final String songFilename;
-	private final String artist;
-	private final String ID;
-	private final String setID;
-	private final ArrayList<Score> scores;
 
-	// TODO - Calculate it from the notes of the map or song length
-	private String length = "";
+	/**
+	 * The name of the map. It can be anything, but most likely it will be the song name.
+	 */
+	private final String name;
+
+	/**
+	 * The background image filename.
+	 */
+	private final String backgroundFileName;
+
+	/**
+	 * The song filename.
+	 */
+	private final String songFilename;
+
+	/**
+	 * The name of the artist that created the song.
+	 */
+	private final String artist;
+
+	/**
+	 * The map ID. Only one map can have that ID.
+	 */
+	private final String ID;
+
+	/**
+	 * The map set ID. All the map files that are part of the same **set** will have the same map set ID
+	 */
+	private final String setID;
+
+	/**
+	 * The notes that will appear on the map.
+	 */
+	private final ArrayList<Note> notes;
+
+	// TODO - Create a ScoreDatabase instead of saving the scores on the map object
+	/**
+	 * The scores that the player achieved.
+	 */
+	private final ArrayList<Score> scores;
 	//endregion
 
 	//region Constructor
-	public Map(String name, String artist, String songFilename, String backgroundFileName, String ID, String setID) {
+	public Map(String name, String artist, String songFilename, String backgroundFileName, String ID, String setID, ArrayList<Note> notes) {
 		this.name = name;
 		this.artist = artist;
 		this.songFilename = songFilename;
 		this.backgroundFileName = backgroundFileName;
 		this.ID = ID;
 		this.setID = setID;
+		this.notes = notes;
 
 		scores = new ArrayList<>();
 	}
@@ -47,8 +80,12 @@ public class Map {
 		return artist;
 	}
 
-	public String getLength() {
-		return length;
+	public int getLength() {
+		var notesSize = notes.size();
+		if (notesSize > 0) {
+			return notes.get(notesSize - 1).getTime();
+		}
+		return 0;
 	}
 
 	public ArrayList<Score> getScores() {
@@ -77,12 +114,12 @@ public class Map {
 				&& ID.equals(map.ID)
 				&& setID.equals(map.setID)
 				&& scores.equals(map.scores)
-				&& length.equals(map.length);
+				&& notes.equals(map.notes);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, backgroundFileName, songFilename, artist, ID, setID, scores, length);
+		return Objects.hash(name, backgroundFileName, songFilename, artist, ID, setID, notes, scores);
 	}
 
 	public void addScore(Score score) {
