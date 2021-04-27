@@ -1,6 +1,6 @@
 package utils;
 
-import core.Constants;
+import core.Config;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,7 +21,7 @@ public class PathUtils {
 				.toAbsolutePath();
 
 		// The cwd changes depending where the code was called for compilation.
-		while (!cwd.getFileName().toString().equals(Constants.PKG_NAME)) {
+		while (!cwd.getFileName().toString().equals(Config.PKG_NAME)) {
 			cwd = cwd.getParent();
 		}
 

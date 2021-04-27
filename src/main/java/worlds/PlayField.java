@@ -4,7 +4,7 @@ import actors.Drum;
 import actors.ImageHolder;
 import actors.NoteActor;
 import actors.NoteCatcher;
-import core.Constants;
+import core.Config;
 import enums.DrumType;
 import graphics.ShapeDrawer;
 import greenfoot.Color;
@@ -19,7 +19,7 @@ public class PlayField extends World {
 	private final long currentMillisecond = System.currentTimeMillis();
 
 	public PlayField(Map map) {
-		super(Constants.APP_WIDTH, Constants.APP_HEIGHT, 1, false);
+		super(Config.APP_WIDTH, Config.APP_HEIGHT, 1, false);
 
 		addUIActors();
 		
@@ -28,8 +28,8 @@ public class PlayField extends World {
 		
 		this.addObject(
 				test,
-				Constants.APP_WIDTH + 40,
-				Constants.APP_HEIGHT / 2 + 40
+				Config.APP_WIDTH + 40,
+				Config.APP_HEIGHT / 2 + 40
 		);
 
 		// TODO - Parse the map, and add the objects to this
@@ -43,19 +43,19 @@ public class PlayField extends World {
 	private void addUIActors() {
 		this.setBackground(WorldUtils.createWorldBackground(Color.BLACK));
 
-		int yPosition = Constants.APP_HEIGHT / 2 + 40;
+		int yPosition = Config.APP_HEIGHT / 2 + 40;
 
 		// Notes rail
 		this.addObject(
 				new ImageHolder(ShapeDrawer.RectangleWithoutText(
-						Constants.APP_WIDTH,
-						Constants.APP_HEIGHT / 5,
+						Config.APP_WIDTH,
+						Config.APP_HEIGHT / 5,
 						new Color(80, 80, 80, 60))),
-				Constants.APP_WIDTH / 2,
+				Config.APP_WIDTH / 2,
 				yPosition
 		);
 
-		addDrumsButtons(Constants.APP_WIDTH / 20, yPosition);
+		addDrumsButtons(Config.APP_WIDTH / 20, yPosition);
 
 		addObject(
 				new NoteCatcher(70),

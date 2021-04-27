@@ -1,6 +1,6 @@
 package utils;
 
-import core.Constants;
+import core.Config;
 import graphics.ShapeDrawer;
 import greenfoot.Color;
 import greenfoot.GreenfootImage;
@@ -11,7 +11,7 @@ public class WorldUtils {
 
 	public static GreenfootImage createWorldBackground(Color color) {
 		return ShapeDrawer.Rectangle(
-				Constants.APP_WIDTH, Constants.APP_HEIGHT, color,
+				Config.APP_WIDTH, Config.APP_HEIGHT, color,
 				"", null, null);
 	}
 }

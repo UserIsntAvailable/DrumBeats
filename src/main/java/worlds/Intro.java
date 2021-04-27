@@ -1,6 +1,6 @@
 package worlds;
 
-import core.Constants;
+import core.Config;
 import core.Startup;
 import greenfoot.Greenfoot;
 import greenfoot.World;
@@ -12,7 +12,7 @@ public class Intro extends World {
 //	private final GifImage gifImage;
 	
 	public Intro() {
-		super(Constants.APP_WIDTH, Constants.APP_HEIGHT, 1);
+		super(Config.APP_WIDTH, Config.APP_HEIGHT, 1);
 
 		Startup.setUpApplication();
 

@@ -4,7 +4,7 @@ import enums.NoteType;
 import enums.TaikoNote;
 import models.Map;
 import models.Note;
-import core.Constants;
+import core.Config;
 import utils.PathUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -16,7 +16,7 @@ class MapJsonParserTests {
 	@Test
 	void Parse_ShouldReturnMap_WhenJSONFileIsValid() {
 		final String actualMapFilePath = PathUtils.getFilePathFromResourcesFolder(
-				Constants.TEST_RESOURCES_PATH, "map_template.map");
+				Config.TEST_RESOURCES_PATH, "map_template.map");
 
 		final ArrayList<Note> actualNotes = new ArrayList<>();
 		actualNotes.add(new Note(2000,

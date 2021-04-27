@@ -1,7 +1,7 @@
 package worlds;
 
 import actors.Button;
-import core.Constants;
+import core.Config;
 import utils.WorldUtils;
 import greenfoot.Color;
 import greenfoot.Font;
@@ -13,7 +13,7 @@ public class Menu extends World {
 
 	private Menu() {
 		// bounded = false because I will hide actors offscreen
-		super(Constants.APP_WIDTH, Constants.APP_HEIGHT, 1, false);
+		super(Config.APP_WIDTH, Config.APP_HEIGHT, 1, false);
 
 		super.setBackground(WorldUtils.createWorldBackground(new Color(43, 43, 43)));
 
@@ -31,8 +31,8 @@ public class Menu extends World {
 						"", new Font(69), Color.RED,
 						(Greenfoot::setWorld)
 				),
-				Constants.APP_WIDTH / 2,
-				Constants.APP_HEIGHT / 2
+				Config.APP_WIDTH / 2,
+				Config.APP_HEIGHT / 2
 		);
 	}
 
