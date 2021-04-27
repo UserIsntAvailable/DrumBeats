@@ -1,7 +1,7 @@
 package core.actors;
 
 import core.enums.DrumType;
-import core.graphics.Drawer;
+import core.graphics.ShapeDrawer;
 import greenfoot.Actor;
 import greenfoot.Color;
 import greenfoot.Greenfoot;
@@ -26,7 +26,7 @@ public class Drum extends Actor {
 		if (Greenfoot.isKeyDown(key)) {
 			// TODO - I need to set up a ImageCache and get the images
 			// This is just for testing
-			GreenfootImage image = Drawer.RectangleWithoutText(
+			GreenfootImage image = ShapeDrawer.RectangleWithoutText(
 					width, height, getColorByDrumType());
 
 			if (!image.equals(currentImage)) {
@@ -34,7 +34,7 @@ public class Drum extends Actor {
 			}
 		}
 		else {
-			GreenfootImage image = Drawer.RectangleWithoutText(
+			GreenfootImage image = ShapeDrawer.RectangleWithoutText(
 					width, height, new Color(100, 100, 100, 50));
 
 			if (!image.equals(currentImage)) {
