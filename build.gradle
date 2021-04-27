@@ -33,4 +33,4 @@ javafx {
 }
 
 sourceCompatibility = 11
-mainClassName = 'Main'
+mainClassName = 'core.Main'
