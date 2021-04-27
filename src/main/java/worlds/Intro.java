@@ -9,12 +9,19 @@ import greenfoot.World;
  * a.k.a SplashScreen
  */
 public class Intro extends World {
-//	private final GifImage gifImage;
-	
-	public Intro() {
-		super(Config.APP_WIDTH, Config.APP_HEIGHT, 1);
-
+	//	private final GifImage gifImage;
+	static {
 		Startup.setUpApplication();
+	}
+
+	private static final Config config = Config.getInstance();
+
+	public Intro() {
+		super(
+				config.getValue(Integer.class, "APP_WIDTH"),
+				config.getValue(Integer.class, "APP_HEIGHT"),
+				1
+		);
 
 		// TODO - Create GIF animation
 		// TODO - Add "SplashScreen" animation ( I will use a GifImage )

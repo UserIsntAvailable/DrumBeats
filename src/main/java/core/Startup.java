@@ -11,6 +11,7 @@ public class Startup {
 	}
 	
 	public static void setUpApplication(){
+		setUpConfig();
 		setUpImageCache();
 	}
 
@@ -18,5 +19,12 @@ public class Startup {
 		ImageCache imageCache = ImageCache.getInstance();
 
 		// Set up here the image cache here
+	}
+	
+	private static void setUpConfig() {
+		var config = Config.getInstance();
+		
+		config.setValue("APP_WIDTH", 1280);
+		config.setValue("APP_HEIGHT", 720);
 	}
 }

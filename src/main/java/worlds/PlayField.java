@@ -18,18 +18,24 @@ import java.util.List;
 public class PlayField extends World {
 	private final long currentMillisecond = System.currentTimeMillis();
 
+	private static final Config config = Config.getInstance();
+
+	// I will be using this so much here that I think that this is worth it
+	private static final int worldWidth = config.getValue(Integer.class, "APP_WIDTH");
+	private static final int worldHeight = config.getValue(Integer.class, "APP_HEIGHT");
+
 	public PlayField(Map map) {
-		super(Config.APP_WIDTH, Config.APP_HEIGHT, 1, false);
+		super(worldWidth, worldHeight, 1, false);
 
 		addUIActors();
-		
+
 		var test = new NoteActor();
 		test.setImage(ShapeDrawer.CircleWithoutText(60, Color.CYAN));
-		
+
 		this.addObject(
 				test,
-				Config.APP_WIDTH + 40,
-				Config.APP_HEIGHT / 2 + 40
+				worldWidth + 40,
+				worldHeight / 2 + 40
 		);
 
 		// TODO - Parse the map, and add the objects to this
@@ -37,25 +43,25 @@ public class PlayField extends World {
 
 	@Override
 	public void act() {
-		
+
 	}
 
 	private void addUIActors() {
 		this.setBackground(WorldUtils.createWorldBackground(Color.BLACK));
 
-		int yPosition = Config.APP_HEIGHT / 2 + 40;
+		int yPosition = worldHeight / 2 + 40;
 
 		// Notes rail
 		this.addObject(
 				new ImageHolder(ShapeDrawer.RectangleWithoutText(
-						Config.APP_WIDTH,
-						Config.APP_HEIGHT / 5,
+						worldWidth,
+						worldHeight / 5,
 						new Color(80, 80, 80, 60))),
-				Config.APP_WIDTH / 2,
+				worldWidth / 2,
 				yPosition
 		);
 
-		addDrumsButtons(Config.APP_WIDTH / 20, yPosition);
+		addDrumsButtons(worldWidth / 20, yPosition);
 
 		addObject(
 				new NoteCatcher(70),

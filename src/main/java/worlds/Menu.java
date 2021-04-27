@@ -2,20 +2,30 @@ package worlds;
 
 import actors.Button;
 import core.Config;
-import utils.WorldUtils;
 import greenfoot.Color;
 import greenfoot.Font;
 import greenfoot.Greenfoot;
 import greenfoot.World;
+import utils.WorldUtils;
 
 public class Menu extends World {
-	private static final Menu instance = new Menu();
+	// In a DI container I would be injecting this....
+	/* NOTE: If I put this under the instance the config would have not been created and I would get null exception.
+	         Really interesting thing tbh... */
+	private static final Config config = Config.getInstance();
+	
+	private static final Menu instance = new Menu();;
 
 	private Menu() {
 		// bounded = false because I will hide actors offscreen
-		super(Config.APP_WIDTH, Config.APP_HEIGHT, 1, false);
+		super(
+				config.getValue(Integer.class, "APP_WIDTH"),
+				config.getValue(Integer.class, "APP_HEIGHT"),
+				1,
+				false
+		);
 
-		super.setBackground(WorldUtils.createWorldBackground(new Color(43, 43, 43)));
+		this.setBackground(WorldUtils.createWorldBackground(new Color(43, 43, 43)));
 
 		prepareWorld();
 	}
@@ -31,11 +41,11 @@ public class Menu extends World {
 						"", new Font(69), Color.RED,
 						(Greenfoot::setWorld)
 				),
-				Config.APP_WIDTH / 2,
-				Config.APP_HEIGHT / 2
+				config.getValue(Integer.class, "APP_WIDTH") / 2,
+				config.getValue(Integer.class, "APP_HEIGHT") / 2
 		);
 	}
-
+	
 	public static Menu getInstance() {
 		return instance;
 	}
