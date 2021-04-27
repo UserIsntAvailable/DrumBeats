@@ -14,7 +14,7 @@ public class Startup {
 		setUpImageCache();
 	}
 
-	public static void setUpImageCache() {
+	private static void setUpImageCache() {
 		ImageCache imageCache = ImageCache.getInstance();
 
 		// Set up here the image cache here

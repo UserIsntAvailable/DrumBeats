@@ -20,7 +20,7 @@ public class Intro extends World {
 		// TODO - Add "SplashScreen" animation ( I will use a GifImage )
 		
 		// This is just for testing...
-		// FUCK GREENFOOT, IT CAN SUCK MY DICK WITH ITS STUPID ERRORS
+		// Having errors with this...
 //		gifImage = new GifImage("pretty-gif.gif");
 	}
 

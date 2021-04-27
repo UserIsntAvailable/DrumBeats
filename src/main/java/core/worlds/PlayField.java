@@ -1,8 +1,6 @@
 package core.worlds;
 
-import core.actors.Drum;
-import core.actors.ImageHolder;
-import core.actors.NoteCatcher;
+import core.actors.*;
 import core.enums.DrumType;
 import core.graphics.ShapeDrawer;
 import core.models.Map;
@@ -15,13 +13,28 @@ import javafx.util.Pair;
 import java.util.List;
 
 public class PlayField extends World {
+	private final long currentMillisecond = System.currentTimeMillis();
+
 	public PlayField(Map map) {
-		super(Constants.APP_WIDTH, Constants.APP_HEIGHT, 1, true);
+		super(Constants.APP_WIDTH, Constants.APP_HEIGHT, 1, false);
 
 		addUIActors();
+		
+		var test = new NoteActor();
+		test.setImage(ShapeDrawer.CircleWithoutText(60, Color.CYAN));
+		
+		this.addObject(
+				test,
+				Constants.APP_WIDTH + 40,
+				Constants.APP_HEIGHT / 2 + 40
+		);
 
-		// TODO - If map is null create dummy playField
 		// TODO - Parse the map, and add the objects to this
+	}
+
+	@Override
+	public void act() {
+		
 	}
 
 	private void addUIActors() {
@@ -40,7 +53,7 @@ public class PlayField extends World {
 		);
 
 		addDrumsButtons(Constants.APP_WIDTH / 20, yPosition);
-		
+
 		addObject(
 				new NoteCatcher(70),
 				300,
@@ -66,7 +79,7 @@ public class PlayField extends World {
 			String actorValue = drumActors.get(i).getValue();
 			this.addObject(
 					new Drum(width, height, actorKey, actorValue),
-					x + padding * i, 
+					x + padding * i,
 					y
 			);
 		}
