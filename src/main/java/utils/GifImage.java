@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author Michael Berry
  * @author Neil Brown
- * @author Angel Pineda
+ * @author Angel Pineda ( just modifications for read(String name) method )
  * <p>
  * Copyright (c) 2011,2013,2014,2018
  */
@@ -510,10 +510,10 @@ public class GifImage {
 		 */
 		public int read(String name) {
 			status = STATUS_OK;
-			InputStream resource = this.getClass().getResourceAsStream(name);
+			InputStream resource = this.getClass().getClassLoader().getResourceAsStream(name);
 			if (resource == null) {
 				name = "images/" + name;
-				resource = this.getClass().getResourceAsStream(name);
+				resource = this.getClass().getClassLoader().getResourceAsStream(name);
 				if (resource == null) {
 					throw new RuntimeException("The gif file \"" + name + "\" doesn't exist.");
 				}
