@@ -16,19 +16,18 @@ import utils.WorldUtils;
 import java.util.List;
 
 /**
- * Basically where the game takes place.
+ * Basically where the gameplay takes place.
  */
 public class PlayField extends World {
-	private final long currentMillisecond = System.currentTimeMillis();
-
 	private static final Config config = Config.getInstance();
-
-	// I will be using this so much, that I think that this is worth it
-	private static final int worldWidth = config.getValue(Integer.class, "APP_WIDTH");
-	private static final int worldHeight = config.getValue(Integer.class, "APP_HEIGHT");
-
+	
 	public PlayField(Map map) {
-		super(worldWidth, worldHeight, 1, false);
+		super(
+				config.getValue(Integer.class, "APP_WIDTH"),
+				config.getValue(Integer.class, "APP_HEIGHT"),
+				1,
+				false
+		);
 
 		addUIActors();
 
@@ -37,8 +36,8 @@ public class PlayField extends World {
 
 		this.addObject(
 				test,
-				worldWidth + 40,
-				worldHeight / 2 + 40
+				this.getWidth() + 40,
+				this.getHeight() / 2 + 40
 		);
 
 		// TODO - Parse the map, and add the objects to this
@@ -52,19 +51,19 @@ public class PlayField extends World {
 	private void addUIActors() {
 		this.setBackground(WorldUtils.createWorldBackground(Color.BLACK));
 
-		int yPosition = worldHeight / 2 + 40;
+		int yPosition = this.getHeight() / 2 + 40;
 
 		// Notes rail
 		this.addObject(
 				new ImageHolder(ShapeDrawer.RectangleWithoutText(
-						worldWidth,
-						worldHeight / 5,
+						this.getWidth(),
+						this.getHeight() / 5,
 						new Color(80, 80, 80, 60))),
-				worldWidth / 2,
+				this.getWidth() / 2,
 				yPosition
 		);
 
-		addDrumsButtons(worldWidth / 20, yPosition);
+		addDrumsButtons(this.getWidth() / 20, yPosition);
 
 		addObject(
 				new NoteCatcher(70),
@@ -74,7 +73,7 @@ public class PlayField extends World {
 	}
 
 	private void addDrumsButtons(int x, int y) {
-		// TODO - Be able to change the default keys, by creating a Config where all is stored ( maybe rename Constants to Config? )
+		// TODO - Be able to change the default keys, by creating a Config where all is stored
 		List<Pair<DrumType, String>> drumActors = List.of(
 				new Pair<>(DrumType.OUTER, "d"),
 				new Pair<>(DrumType.INNER, "f"),

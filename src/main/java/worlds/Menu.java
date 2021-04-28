@@ -41,8 +41,8 @@ public class Menu extends World {
 						"", new Font(69), Color.RED,
 						(Greenfoot::setWorld)
 				),
-				config.getValue(Integer.class, "APP_WIDTH") / 2,
-				config.getValue(Integer.class, "APP_HEIGHT") / 2
+				this.getWidth() / 2,
+				this.getHeight() / 2
 		);
 	}
 	
