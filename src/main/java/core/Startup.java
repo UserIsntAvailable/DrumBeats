@@ -3,7 +3,7 @@ package core;
 import greenfoot.core.ImageCache;
 
 /**
- * Set up important settings needed by the project like:
+ * Set up important things needed by the game like:
  * Config, Parsers, ImageCache and others
  */
 public class Startup {

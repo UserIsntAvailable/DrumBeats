@@ -2,6 +2,9 @@ package core;
 
 import java.util.HashMap;
 
+/**
+ * Global config container. Helpful to save values used across all the app.
+ */
 public class Config {
 	//region Private Fields
 	private static final Config instance = new Config();

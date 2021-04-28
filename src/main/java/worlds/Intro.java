@@ -6,7 +6,7 @@ import greenfoot.Greenfoot;
 import greenfoot.World;
 
 /**
- * a.k.a SplashScreen
+ * a.k.a SplashScreen. This is the "entry point" if the game is run from Greenfoot.
  */
 public class Intro extends World {
 	//	private final GifImage gifImage;

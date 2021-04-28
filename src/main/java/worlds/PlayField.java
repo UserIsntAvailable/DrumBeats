@@ -15,12 +15,15 @@ import utils.WorldUtils;
 
 import java.util.List;
 
+/**
+ * Basically where the game takes place.
+ */
 public class PlayField extends World {
 	private final long currentMillisecond = System.currentTimeMillis();
 
 	private static final Config config = Config.getInstance();
 
-	// I will be using this so much here that I think that this is worth it
+	// I will be using this so much, that I think that this is worth it
 	private static final int worldWidth = config.getValue(Integer.class, "APP_WIDTH");
 	private static final int worldHeight = config.getValue(Integer.class, "APP_HEIGHT");
 
