@@ -1,15 +1,20 @@
 package worlds;
 
+import actors.ImageHolder;
 import core.Config;
 import core.Startup;
 import greenfoot.Greenfoot;
 import greenfoot.World;
+import utils.GifImage;
 
 /**
  * a.k.a SplashScreen. This is the "entry point" if the game is run from Greenfoot.
  */
 public class Intro extends World {
-	//	private final GifImage gifImage;
+	private final GifImage gifImage;
+	// I need this because World.setBackground duplicates the image until it fits the world dimensions
+	private final ImageHolder gifImageHolder;
+
 	static {
 		Startup.setUpApplication();
 	}
@@ -25,14 +30,20 @@ public class Intro extends World {
 
 		// TODO - Create GIF animation
 		// TODO - Add "SplashScreen" animation ( I will use a GifImage )
-		
+
 		// This is just for testing...
-		// Having errors with this...
-//		gifImage = new GifImage("pretty-gif.gif");
+		gifImage = new GifImage("pretty-gif.gif");
+		gifImageHolder = new ImageHolder(gifImage.getCurrentImage());
+		this.addObject(
+				gifImageHolder,
+				this.getWidth() / 2,
+				this.getHeight() / 2
+		);
 	}
 
 	@Override
 	public void act() {
+		gifImageHolder.setImage(gifImage.getCurrentImage());
 		if (Greenfoot.isKeyDown("space")) {
 			Greenfoot.setWorld(Menu.getInstance());
 		}
