@@ -2,10 +2,10 @@ package parsers;
 
 import enums.NoteType;
 import enums.TaikoNote;
+import models.NoteModel;
 import utils.EnumUtils;
 import org.json.*;
 import models.Map;
-import models.Note;
 
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -40,14 +40,14 @@ public class MapJsonParser {
 				parseNoteSection(obj.getJSONArray("Notes")));
 	}
 
-	private static ArrayList<Note> parseNoteSection(JSONArray jsonArray) {
-		var returned = new ArrayList<Note>();
+	private static ArrayList<NoteModel> parseNoteSection(JSONArray jsonArray) {
+		var returned = new ArrayList<NoteModel>();
 
 		for (var i = 0; i < jsonArray.length(); i++) {
 			var note = jsonArray.getJSONObject(i);
 
 			returned.add(
-					new Note(
+					new NoteModel(
 							note.getInt("Time"),
 							EnumUtils.getEnumFromConstantValue(TaikoNote.class, note.getInt("TaikoNote")),
 							EnumUtils.getEnumValuesFromFlag(NoteType.class, note.getInt("NoteType")),

@@ -40,7 +40,7 @@ public class Map {
 	/**
 	 * The notes that will appear on the map.
 	 */
-	private final ArrayList<Note> notes;
+	private final ArrayList<NoteModel> notes;
 
 	// TODO - Create a ScoreDatabase instead of saving the scores on the map object
 	/**
@@ -50,7 +50,7 @@ public class Map {
 	//endregion
 
 	//region Constructor
-	public Map(String name, String artist, String songFilename, String backgroundFileName, String ID, String setID, ArrayList<Note> notes) {
+	public Map(String name, String artist, String songFilename, String backgroundFileName, String ID, String setID, ArrayList<NoteModel> notes) {
 		this.name = name;
 		this.artist = artist;
 		this.songFilename = songFilename;
@@ -100,7 +100,7 @@ public class Map {
 		return setID;
 	}
 	
-	public ArrayList<Note> getNotes() {
+	public ArrayList<NoteModel> getNotes() {
 		return notes;
 	}
 	//endregion

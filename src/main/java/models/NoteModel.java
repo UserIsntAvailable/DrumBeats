@@ -6,7 +6,7 @@ import enums.TaikoNote;
 import java.util.EnumSet;
 import java.util.Objects;
 
-public class Note {
+public class NoteModel {
 	//region Private Fields
 
 	/**
@@ -31,7 +31,7 @@ public class Note {
 	//endregion
 
 	//region Constructor
-	public Note(int time, TaikoNote taikoNote, EnumSet<NoteType> noteType, String params) {
+	public NoteModel(int time, TaikoNote taikoNote, EnumSet<NoteType> noteType, String params) {
 		this.time = time;
 		this.taikoNote = taikoNote;
 		this.noteType = noteType;
@@ -62,11 +62,11 @@ public class Note {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
-		Note note = (Note) o;
-		return time == note.time
-				&& taikoNote == note.taikoNote
-				&& noteType.equals(note.noteType)
-				&& params.equals(note.params);
+		NoteModel noteModel = (NoteModel) o;
+		return time == noteModel.time
+				&& taikoNote == noteModel.taikoNote
+				&& noteType.equals(noteModel.noteType)
+				&& params.equals(noteModel.params);
 	}
 
 	@Override
