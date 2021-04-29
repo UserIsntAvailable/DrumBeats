@@ -99,6 +99,10 @@ public class Map {
 	public String getSetID() {
 		return setID;
 	}
+	
+	public ArrayList<Note> getNotes() {
+		return notes;
+	}
 	//endregion
 
 	//region Public Methods
