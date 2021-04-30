@@ -23,8 +23,8 @@ public class Intro extends World {
 
 	public Intro() {
 		super(
-				config.getValue(Integer.class, "APP_WIDTH"),
-				config.getValue(Integer.class, "APP_HEIGHT"),
+				config.getValue("APP_WIDTH"),
+				config.getValue("APP_HEIGHT"),
 				1
 		);
 

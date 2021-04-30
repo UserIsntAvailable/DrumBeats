@@ -19,8 +19,8 @@ public class Menu extends World {
 	private Menu() {
 		// bounded = false because I will hide actors offscreen
 		super(
-				config.getValue(Integer.class, "APP_WIDTH"),
-				config.getValue(Integer.class, "APP_HEIGHT"),
+				config.getValue("APP_WIDTH"),
+				config.getValue("APP_HEIGHT"),
 				1,
 				false
 		);

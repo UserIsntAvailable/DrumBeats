@@ -31,8 +31,8 @@ public class PlayField extends World {
 	//region Constructor
 	public PlayField(Map map) {
 		super(
-				config.getValue(Integer.class, "APP_WIDTH"),
-				config.getValue(Integer.class, "APP_HEIGHT"),
+				config.getValue("APP_WIDTH"),
+				config.getValue("APP_HEIGHT"),
 				1,
 				false
 		);
@@ -78,7 +78,7 @@ public class PlayField extends World {
 						this.getHeight() / 5,
 						new Color(80, 80, 80, 60))),
 				this.getWidth() / 2,
-				config.getValue(Integer.class, getClassName() + "ACTORS_Y_POSITION")
+				config.getValue(getClassName() + "ACTORS_Y_POSITION")
 		);
 
 		addDrumsButtons();
@@ -86,7 +86,7 @@ public class PlayField extends World {
 		addObject(
 				new NoteCatcher(70),
 				300,
-				config.getValue(Integer.class, getClassName() + "ACTORS_Y_POSITION")
+				config.getValue(getClassName() + "ACTORS_Y_POSITION")
 		);
 	}
 
@@ -121,7 +121,7 @@ public class PlayField extends World {
 			this.addObject(
 					new NoteActor(noteDiameter, note),
 					this.getWidth() + (noteDiameter / 2) + i,
-					config.getValue(Integer.class, getClassName() + "ACTORS_Y_POSITION")
+					config.getValue(getClassName() + "ACTORS_Y_POSITION")
 			);
 		}
 	}
