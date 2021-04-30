@@ -21,7 +21,12 @@ public class Config {
 	public static Config getInstance() {
 		return instance;
 	}
-
+	
+	// I don't actually know if this is a good practice on java....
+	public <T> T getValue(String key) {
+		return (T)configValues.get(key);
+	}
+	
 	public <T> T getValue(Class<T> clazz, String key) {
 		var configValue = configValues.get(key);
 		
