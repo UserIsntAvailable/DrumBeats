@@ -64,7 +64,7 @@ public class PlayField extends World {
 
 		config.setValue(
 				getClassName() + "NOTES_DIAMETER",
-				60
+				this.getWidth() / 21
 		);
 	}
 
@@ -84,8 +84,8 @@ public class PlayField extends World {
 		addDrumsButtons();
 
 		addObject(
-				new NoteCatcher(70),
-				300,
+				new NoteCatcher(config.getValue(Integer.class, getClassName() + "NOTES_DIAMETER") + 10),
+				this.getWidth() / 4,
 				config.getValue(getClassName() + "ACTORS_Y_POSITION")
 		);
 	}
@@ -99,16 +99,17 @@ public class PlayField extends World {
 				new Pair<>(DrumType.OUTER, "k")
 		);
 
-		int width = 40;
-		int height = 100;
-		int padding = 50;
+		int xPosition = this.getWidth() / 18;
+		int width = this.getWidth() / 32;
+		int height = this.getHeight() / 7;
+		int padding = this.getWidth() / 25;
 
 		for (int i = 0; i <= drumActors.size() - 1; i++) {
 			DrumType actorKey = drumActors.get(i).getKey();
 			String actorValue = drumActors.get(i).getValue();
 			this.addObject(
 					new Drum(width, height, actorKey, actorValue),
-					this.getWidth() / 20 + padding * i,
+					xPosition + padding * i,
 					config.getValue(getClassName() + "ACTORS_Y_POSITION")
 			);
 		}
