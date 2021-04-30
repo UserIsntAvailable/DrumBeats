@@ -15,7 +15,6 @@ import models.NoteModel;
 import utils.WorldUtils;
 
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Basically where the gameplay takes place.
@@ -51,7 +50,7 @@ public class PlayField extends World {
 	//region Public Methods
 	@Override
 	public void act() {
-
+		
 	}
 	//endregion
 
@@ -117,7 +116,7 @@ public class PlayField extends World {
 
 	private void addNotesObjects(List<NoteModel> notes) {
 		var noteDiameter = config.getValue(Integer.class, "NOTES_DIAMETER");
-		for (var i = 0; i < notes.size() - 1; i++) {
+		for (var i = 0; i < notes.size(); i++) {
 			var note = notes.get(i);
 			this.addObject(
 					new NoteActor(noteDiameter, note),
