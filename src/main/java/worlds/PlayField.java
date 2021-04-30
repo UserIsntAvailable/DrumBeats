@@ -58,12 +58,12 @@ public class PlayField extends World {
 	//region Private Methods
 	private void configurePlayField() {
 		config.setValue(
-				getClassName() + "ACTORS_Y_POSITION",
+				"ACTORS_Y_POSITION",
 				this.getHeight() / 2 + 40
 		);
 
 		config.setValue(
-				getClassName() + "NOTES_DIAMETER",
+				"NOTES_DIAMETER",
 				this.getWidth() / 21
 		);
 	}
@@ -78,15 +78,15 @@ public class PlayField extends World {
 						this.getHeight() / 5,
 						new Color(80, 80, 80, 60))),
 				this.getWidth() / 2,
-				config.getValue(getClassName() + "ACTORS_Y_POSITION")
+				config.getValue("ACTORS_Y_POSITION")
 		);
 
 		addDrumsButtons();
 
 		addObject(
-				new NoteCatcher(config.getValue(Integer.class, getClassName() + "NOTES_DIAMETER") + 10),
+				new NoteCatcher(config.getValue(Integer.class, "NOTES_DIAMETER") + 10),
 				this.getWidth() / 4,
-				config.getValue(getClassName() + "ACTORS_Y_POSITION")
+				config.getValue("ACTORS_Y_POSITION")
 		);
 	}
 
@@ -110,27 +110,21 @@ public class PlayField extends World {
 			this.addObject(
 					new Drum(width, height, actorKey, actorValue),
 					xPosition + padding * i,
-					config.getValue(getClassName() + "ACTORS_Y_POSITION")
+					config.getValue("ACTORS_Y_POSITION")
 			);
 		}
 	}
 
 	private void addNotesObjects(List<NoteModel> notes) {
-		var noteDiameter = config.getValue(Integer.class, getClassName() + "NOTES_DIAMETER");
+		var noteDiameter = config.getValue(Integer.class, "NOTES_DIAMETER");
 		for (var i = 0; i < notes.size() - 1; i++) {
 			var note = notes.get(i);
 			this.addObject(
 					new NoteActor(noteDiameter, note),
 					this.getWidth() + (noteDiameter / 2) + i,
-					config.getValue(getClassName() + "ACTORS_Y_POSITION")
+					config.getValue("ACTORS_Y_POSITION")
 			);
 		}
-	}
-
-	private String getClassName() {
-		return this.getClass()
-				.getSimpleName()
-				.toUpperCase(Locale.ENGLISH);
 	}
 	//endregion
 }
