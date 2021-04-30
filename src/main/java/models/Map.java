@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 // TODO - I can create a Hash property to know if the map was changed once created ( not really need it here tho )
@@ -40,7 +41,7 @@ public class Map {
 	/**
 	 * The notes that will appear on the map.
 	 */
-	private final ArrayList<NoteModel> notes;
+	private final List<NoteModel> notes;
 
 	// TODO - Create a ScoreDatabase instead of saving the scores on the map object
 	/**
@@ -50,7 +51,7 @@ public class Map {
 	//endregion
 
 	//region Constructor
-	public Map(String name, String artist, String songFilename, String backgroundFileName, String ID, String setID, ArrayList<NoteModel> notes) {
+	public Map(String name, String artist, String songFilename, String backgroundFileName, String ID, String setID, List<NoteModel> notes) {
 		this.name = name;
 		this.artist = artist;
 		this.songFilename = songFilename;
@@ -100,7 +101,7 @@ public class Map {
 		return setID;
 	}
 	
-	public ArrayList<NoteModel> getNotes() {
+	public List<NoteModel> getNotes() {
 		return notes;
 	}
 	//endregion

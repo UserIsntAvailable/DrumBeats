@@ -14,7 +14,10 @@ import models.Map;
 import models.NoteModel;
 import utils.WorldUtils;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+import java.util.stream.Collectors;
 
 /**
  * Basically where the gameplay takes place.
@@ -22,8 +25,8 @@ import java.util.List;
 // TODO - Create handlers to separate all the functionality here ( I thought that it will be a good idea to have everything here but it is becoming a little bit chaotic )
 public class PlayField extends World {
 	//region Private Fields
-	private final int currentNoteIndex = 0;
-	private final long currentMillis = System.currentTimeMillis();
+	private Queue<NoteActor> notesQueue;
+	private final long timeWhenCreated;
 	private static final Config config = Config.getInstance();
 	//endregion
 
@@ -42,15 +45,16 @@ public class PlayField extends World {
 
 		// Want to keep a empty play field even though the map is null
 		if (map != null) {
-			addNotesObjects(map.getNotes());
+			notesQueue = noteModelToNoteActor(map.getNotes());
 		}
+
+		timeWhenCreated = System.currentTimeMillis();
 	}
 	//endregion
 
 	//region Public Methods
 	@Override
 	public void act() {
-		
 	}
 	//endregion
 
@@ -114,16 +118,10 @@ public class PlayField extends World {
 		}
 	}
 
-	private void addNotesObjects(List<NoteModel> notes) {
-		var noteDiameter = config.getValue(Integer.class, "NOTES_DIAMETER");
-		for (var i = 0; i < notes.size(); i++) {
-			var note = notes.get(i);
-			this.addObject(
-					new NoteActor(noteDiameter, note),
-					this.getWidth() + (noteDiameter / 2) + i,
-					config.getValue("ACTORS_Y_POSITION")
-			);
-		}
+	private Queue<NoteActor> noteModelToNoteActor(List<NoteModel> noteModel) {
+		return noteModel.stream()
+				.map(note -> new NoteActor(config.getValue("NOTES_DIAMETER"), note))
+				.collect(Collectors.toCollection(LinkedList::new));
 	}
 	//endregion
 }
