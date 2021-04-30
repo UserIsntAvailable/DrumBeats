@@ -91,7 +91,7 @@ public class PlayField extends World {
 	}
 
 	private void addDrumsButtons() {
-		// TODO - Be able to change the default keys, by creating a Config where all is stored
+		// TODO - Be able to change the default keys ( I can save that info on the config )
 		List<Pair<DrumType, String>> drumActors = List.of(
 				new Pair<>(DrumType.OUTER, "d"),
 				new Pair<>(DrumType.INNER, "f"),

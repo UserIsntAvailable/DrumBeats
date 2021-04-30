@@ -1,4 +1,4 @@
-﻿package utils;
+package utils;
 
 import java.util.Objects;
 
@@ -10,7 +10,7 @@ public class PathUtils {
 		return Objects.requireNonNull(
 				PathUtils.class
 						.getClassLoader()
-						.getResource("maps" + mapSetID + "/" + mapID))
+						.getResource("maps/" + mapSetID + "/" + mapID))
 				.getPath();
 	}
 }

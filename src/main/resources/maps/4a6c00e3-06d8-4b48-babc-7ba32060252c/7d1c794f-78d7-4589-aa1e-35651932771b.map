@@ -1,0 +1,22 @@
+{
+    "Name": "Circles",
+    "Artist": "pnx",
+    "SongFileName": "",
+    "BackgroundFileName": "",
+    "ID": "7d1c794f-78d7-4589-aa1e-35651932771b",
+    "SetID": "4a6c00e3-06d8-4b48-babc-7ba32060252c",
+    "Notes": [
+        {
+            "Time": 2000,
+            "TaikoNote": 0,
+            "NoteType": 2,
+            "Params": "0,"
+        },
+        {
+            "Time": 4000,
+            "TaikoNote": 0,
+            "NoteType": 1,
+            "Params": "0,"
+        }
+    ]
+}

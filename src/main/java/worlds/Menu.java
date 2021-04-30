@@ -4,7 +4,6 @@ import actors.Button;
 import core.Config;
 import greenfoot.Color;
 import greenfoot.Font;
-import greenfoot.Greenfoot;
 import greenfoot.World;
 import utils.WorldUtils;
 
@@ -13,8 +12,9 @@ public class Menu extends World {
 	/* NOTE: If I put this under the instance the config would have not been created and I would get null exception.
 	         Really interesting thing tbh... */
 	private static final Config config = Config.getInstance();
-	
-	private static final Menu instance = new Menu();;
+
+	private static final Menu instance = new Menu();
+	;
 
 	private Menu() {
 		// bounded = false because I will hide actors offscreen
@@ -38,14 +38,13 @@ public class Menu extends World {
 		addObject(
 				new Button(
 						400, 60, Color.WHITE,
-						"", new Font(69), Color.RED,
-						(Greenfoot::setWorld)
+						"", new Font(69), Color.RED
 				),
 				this.getWidth() / 2,
 				this.getHeight() / 2
 		);
 	}
-	
+
 	public static Menu getInstance() {
 		return instance;
 	}

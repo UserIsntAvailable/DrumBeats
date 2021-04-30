@@ -1,21 +1,19 @@
 package actors;
 
 import graphics.ShapeDrawer;
-import worlds.PlayField;
 import greenfoot.*;
-
-import java.util.function.Consumer;
+import models.Map;
+import parsers.MapJsonParser;
+import utils.PathUtils;
+import worlds.PlayField;
 
 
 public class Button extends Actor {
 	// I will keep the image just in case that I need it later
 	private final GreenfootImage _image;
-	private final Consumer<World> _action;
 
 	public Button(int width, int height, Color background,
-	              String text, Font font, Color textColor,
-	              Consumer<World> action) {
-		_action = action;
+	              String text, Font font, Color textColor) {
 		_image = ShapeDrawer.Rectangle(width, height, background, text, font, textColor);
 
 		setImage(_image);
@@ -24,7 +22,15 @@ public class Button extends Actor {
 	public void act() {
 		if (Greenfoot.mouseClicked(this)) {
 			// TODO - Refactor this into a Event Listener that changes the actors on screen depending on what button is clicked
-			_action.accept(new PlayField(null));
+			
+			// Testing of course
+			String mapFilePath = PathUtils.getMapFromResources(
+					"4a6c00e3-06d8-4b48-babc-7ba32060252c",
+					"7d1c794f-78d7-4589-aa1e-35651932771b.map"
+			);
+			Map map = MapJsonParser.parse(mapFilePath);
+
+			Greenfoot.setWorld(new PlayField(map));
 		}
 	}
 }
