@@ -3,7 +3,7 @@ package parsers;
 import enums.NoteType;
 import enums.TaikoNote;
 import models.Map;
-import models.Note;
+import models.NoteModel;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -18,16 +18,16 @@ class MapJsonParserTests {
 				.getResource("map_template.map")
 				.getFile();
 
-		final ArrayList<Note> actualNotes = new ArrayList<>();
-		actualNotes.add(new Note(2000,
+		final ArrayList<NoteModel> actualNotes = new ArrayList<>();
+		actualNotes.add(new NoteModel(2000,
 				TaikoNote.CIRCLE,
 				EnumSet.of(NoteType.DON),
 				"0,"));
-		actualNotes.add(new Note(4000,
+		actualNotes.add(new NoteModel(4000,
 				TaikoNote.SLIDER,
 				EnumSet.of(NoteType.KAT),
 				"1,7000,"));
-		actualNotes.add(new Note(8000,
+		actualNotes.add(new NoteModel(8000,
 				TaikoNote.SPINNER,
 				EnumSet.of(NoteType.DON, NoteType.KAT),
 				"10000,"));
