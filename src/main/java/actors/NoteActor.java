@@ -29,9 +29,8 @@ public class NoteActor extends SmoothMover {
 
 	@Override
 	public void act() {
-		// TODO - Create formula to know how fast a note needs to move to reach the NoteCatcher in time
-		// TODO - This movement need to be relative to the world size
-			this.move(-1);
+		// TODO - BPM and Time Signatures to determine how fast a note needs to go to be clicked in time
+		this.move(-1);
 	}
 	
 	public NoteModel getNoteModel() {

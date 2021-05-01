@@ -28,8 +28,7 @@ public class Intro extends World {
 				1
 		);
 
-		// TODO - Create GIF animation
-		// TODO - Add "SplashScreen" animation ( I will use a GifImage )
+		// TODO - Create a GIF for the game
 
 		// This is just for testing...
 		gifImage = new GifImage("pretty-gif.gif");
@@ -44,7 +43,7 @@ public class Intro extends World {
 	@Override
 	public void act() {
 		gifImageHolder.setImage(gifImage.getCurrentImage());
-		if (Greenfoot.isKeyDown("space")) {
+		if (Greenfoot.isKeyDown("space") || Greenfoot.mouseClicked(null)) {
 			Greenfoot.setWorld(Menu.getInstance());
 		}
 	}

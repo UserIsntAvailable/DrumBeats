@@ -55,6 +55,19 @@ public class PlayField extends World {
 	//region Public Methods
 	@Override
 	public void act() {
+		if (notesQueue.size() > 0) {
+			var time = System.currentTimeMillis() - timeWhenCreated;
+			if (notesQueue.peek().getNoteModel().getTime() <= time) {
+
+				var note = notesQueue.poll();
+
+				this.addObject(
+						note,
+						this.getWidth() + config.getValue(Integer.class, "NOTES_DIAMETER") / 2,
+						config.getValue("ACTORS_Y_POSITION")
+				);
+			}
+		}
 	}
 	//endregion
 

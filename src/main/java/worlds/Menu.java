@@ -4,6 +4,7 @@ import actors.Button;
 import core.Config;
 import greenfoot.Color;
 import greenfoot.Font;
+import greenfoot.GreenfootSound;
 import greenfoot.World;
 import utils.WorldUtils;
 
@@ -12,9 +13,9 @@ public class Menu extends World {
 	/* NOTE: If I put this under the instance the config would have not been created and I would get null exception.
 	         Really interesting thing tbh... */
 	private static final Config config = Config.getInstance();
-
 	private static final Menu instance = new Menu();
-	;
+
+	private final GreenfootSound bgSound = new GreenfootSound("menu.mid");
 
 	private Menu() {
 		// bounded = false because I will hide actors offscreen
@@ -25,9 +26,18 @@ public class Menu extends World {
 				false
 		);
 
+		// TODO - Create logo for the game
+
+		bgSound.setVolume(30);
+		bgSound.play();
+
 		this.setBackground(WorldUtils.createWorldBackground(new Color(43, 43, 43)));
 
 		prepareWorld();
+	}
+	
+	public static Menu getInstance() {
+		return instance;
 	}
 
 	private void prepareWorld() {
@@ -35,6 +45,7 @@ public class Menu extends World {
 		// TODO - Create helper methods for the creation of buttons ( I will probably need padding, margin, and grids... )
 
 		// This is a test to have the bare minimum to enter the play area
+		this.showText("Play Field", this.getWidth() / 2, this.getHeight() / 2);
 		addObject(
 				new Button(
 						400, 60, Color.WHITE,
@@ -43,9 +54,5 @@ public class Menu extends World {
 				this.getWidth() / 2,
 				this.getHeight() / 2
 		);
-	}
-
-	public static Menu getInstance() {
-		return instance;
 	}
 }
