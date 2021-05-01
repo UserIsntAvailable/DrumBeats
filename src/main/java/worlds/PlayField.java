@@ -39,6 +39,8 @@ public class PlayField extends World {
 				false
 		);
 
+		Menu.getInstance().getBgMusic().stop();
+
 		configurePlayField();
 
 		addUIActors();
