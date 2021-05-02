@@ -7,13 +7,13 @@
     "SetID": "4a6c00e3-06d8-4b48-babc-7ba32060252c",
     "Notes": [
         {
-            "Time": 2000,
+            "Time": 4000,
             "TaikoNote": 0,
             "NoteType": 2,
             "Params": "0,"
         },
         {
-            "Time": 4000,
+            "Time": 8000,
             "TaikoNote": 0,
             "NoteType": 1,
             "Params": "0,"

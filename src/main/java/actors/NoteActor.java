@@ -1,5 +1,6 @@
 package actors;
 
+import core.Config;
 import enums.NoteType;
 import graphics.ShapeDrawer;
 import greenfoot.Color;
@@ -10,6 +11,7 @@ import java.util.List;
 
 public class NoteActor extends SmoothMover {
 	private final NoteModel noteModel;
+	private static final Config config = Config.getInstance();
 	
 	public NoteActor(int diameter, NoteModel noteModel) {
 		this.noteModel = noteModel;
@@ -33,12 +35,13 @@ public class NoteActor extends SmoothMover {
 	@Override
 	public void act() {
 		// TODO - BPM and Time Signatures to determine how fast a note needs to go to be clicked in time
-		this.move(-5);
+		this.move(-0.3 * config.getValue(Double.class, "APP_DELTA_TIME"));
 
 		// Just testing, I need to refactor this
 		var noteCatcher = this.getWorld().getObjects(NoteCatcher.class).get(0);
 
 		if (this.intersects(noteCatcher)) {
+			System.out.println("It touch me");
 			var redKeys = List.of("f", "j");
 			if (noteModel.getNoteType().contains(NoteType.KAT)) {
 				removeObjectIfKeysPress(List.of("d", "k"));

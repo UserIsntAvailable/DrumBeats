@@ -57,19 +57,40 @@ public class PlayField extends World {
 	//region Public Methods
 	@Override
 	public void act() {
+		refreshConfigFrameInfo();
+		
 		if (notesQueue.size() > 0) {
-			var time = System.currentTimeMillis() - timeWhenCreated;
-			if (notesQueue.peek().getNoteModel().getTime() <= time) {
-
-				var note = notesQueue.poll();
-
+			var note = notesQueue.peek();
+			var travelTime = this.travelTime(note);
+			var curTime = System.currentTimeMillis() - timeWhenCreated;
+			if (note.getNoteModel().getTime() <= curTime - travelTime) {
 				this.addObject(
 						note,
 						this.getWidth() + config.getValue(Integer.class, "NOTES_DIAMETER") / 2,
 						config.getValue("ACTORS_Y_POSITION")
 				);
+				notesQueue.poll();
 			}
 		}
+	}
+
+	private double travelTime(NoteActor note) {
+		var diameter = config.getValue(Integer.class, "NOTES_DIAMETER");
+		diameter = note.getNoteModel().getParams().contains("0") ? diameter : diameter * 2;
+		
+		var spawnPosition = this.getWidth() + (diameter / 2);
+		var travelDistance = spawnPosition - config.getValue(Integer.class,"NOTE_CATCHER_X_POSITION");
+		
+		return travelDistance / -0.3;
+	}
+
+	private void refreshConfigFrameInfo() {
+		var curTime = System.nanoTime();
+		config.setValue(
+				"APP_DELTA_TIME",
+				(curTime - config.getValue(Long.class, "APP_LAST_GAME_CYCLE_TIME")) / 1000000.0
+		);
+		config.setValue("APP_LAST_GAME_CYCLE_TIME", curTime);
 	}
 	//endregion
 
@@ -83,6 +104,16 @@ public class PlayField extends World {
 		config.setValue(
 				"NOTES_DIAMETER",
 				this.getWidth() / 21
+		);
+
+		config.setValue(
+				"APP_LAST_GAME_CYCLE_TIME",
+				System.nanoTime()
+		);
+
+		config.setValue(
+				"APP_DELTA_TIME",
+				0.0
 		);
 	}
 
@@ -100,10 +131,14 @@ public class PlayField extends World {
 		);
 
 		addDrumsButtons();
-
+		
+		var noteCatcherPosition = this.getWidth() / 4;
+		
+		config.setValue("NOTE_CATCHER_X_POSITION", noteCatcherPosition);
+		
 		addObject(
 				new NoteCatcher(config.getValue(Integer.class, "NOTES_DIAMETER") + 10),
-				this.getWidth() / 4,
+				noteCatcherPosition,
 				config.getValue("ACTORS_Y_POSITION")
 		);
 	}
