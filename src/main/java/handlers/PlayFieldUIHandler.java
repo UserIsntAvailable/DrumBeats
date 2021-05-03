@@ -44,7 +44,6 @@ public class PlayFieldUIHandler implements Handler {
 	}
 
 	public void close() {
-		Greenfoot.setWorld(Menu.getInstance());
 	}
 	//endregion
 	

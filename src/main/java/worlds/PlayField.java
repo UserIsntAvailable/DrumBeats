@@ -1,36 +1,22 @@
 package worlds;
 
-import actors.Drum;
-import actors.ImageHolder;
-import actors.NoteActor;
-import actors.NoteCatcher;
 import core.Config;
-import enums.DrumType;
-import graphics.ShapeDrawer;
-import greenfoot.Color;
 import greenfoot.World;
-import javafx.util.Pair;
+import handlers.MapHandler;
+import handlers.PlayFieldUIHandler;
 import models.Map;
-import models.NoteModel;
-import utils.WorldUtils;
-
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.stream.Collectors;
+import utils.AppUtils;
+import utils.NoteUtils;
 
 /**
  * Basically where the gameplay takes place.
  */
-// TODO - Create handlers to separate all the functionality here ( I thought that it will be a good idea to have everything here but it is becoming a little bit chaotic )
 public class PlayField extends World {
-	//region Private Fields
-	private Queue<NoteActor> notesQueue;
-	private final long timeWhenCreated;
+	private final long timeWhenStarted;
+	private final MapHandler mapHandler;
+	private final PlayFieldUIHandler playFieldUIHandler;
 	private static final Config config = Config.getInstance();
-	//endregion
 
-	//region Constructor
 	public PlayField(Map map) {
 		super(
 				config.getValue("APP_WIDTH"),
@@ -39,34 +25,27 @@ public class PlayField extends World {
 				false
 		);
 
-		Menu.getInstance().getBgMusic().stop();
+		mapHandler = new MapHandler(map);
+		playFieldUIHandler = new PlayFieldUIHandler(this);
 
-		configurePlayField();
+		mapHandler.start();
+		playFieldUIHandler.start();
 
-		addUIActors();
-
-		// Want to keep a empty play field even though the map is null
-		if (map != null) {
-			notesQueue = noteModelToNoteActor(map.getNotes());
-		}
-
-		timeWhenCreated = System.currentTimeMillis();
+		AppUtils.refreshLastFrameTime();
+		timeWhenStarted = System.currentTimeMillis();
 	}
-	//endregion
 
-	//region Public Methods
 	@Override
 	public void act() {
-		refreshConfigFrameInfo();
-		
+		AppUtils.refreshFramesDeltaTime();
+		var notesQueue = mapHandler.getNoteQueue();
 		if (notesQueue.size() > 0) {
 			var note = notesQueue.peek();
-			var travelTime = this.travelTime(note);
-			var curTime = System.currentTimeMillis() - timeWhenCreated;
-			if (note.getNoteModel().getTime() <= curTime - travelTime) {
+			var noteModel = note.getNoteModel();
+			if (noteModel.getTime() <= System.currentTimeMillis() - timeWhenStarted - NoteUtils.getNoteOffsetTime(noteModel)) {
 				this.addObject(
 						note,
-						this.getWidth() + config.getValue(Integer.class, "NOTES_DIAMETER") / 2,
+						(int) (this.getWidth() + NoteUtils.getNoteDiameter(noteModel) / 2),
 						config.getValue("ACTORS_Y_POSITION")
 				);
 				notesQueue.poll();
@@ -74,104 +53,9 @@ public class PlayField extends World {
 		}
 	}
 
-	private double travelTime(NoteActor note) {
-		var diameter = config.getValue(Integer.class, "NOTES_DIAMETER");
-		diameter = note.getNoteModel().getParams().contains("0") ? diameter : diameter * 2;
-		
-		var spawnPosition = this.getWidth() + (diameter / 2);
-		var travelDistance = spawnPosition - config.getValue(Integer.class,"NOTE_CATCHER_X_POSITION");
-		
-		return travelDistance / -0.3;
+	@Override
+	public void stopped() {
+		mapHandler.close();
+		playFieldUIHandler.close();
 	}
-
-	private void refreshConfigFrameInfo() {
-		var curTime = System.nanoTime();
-		config.setValue(
-				"APP_DELTA_TIME",
-				(curTime - config.getValue(Long.class, "APP_LAST_GAME_CYCLE_TIME")) / 1000000.0
-		);
-		config.setValue("APP_LAST_GAME_CYCLE_TIME", curTime);
-	}
-	//endregion
-
-	//region Private Methods
-	private void configurePlayField() {
-		config.setValue(
-				"ACTORS_Y_POSITION",
-				this.getHeight() / 2 + 40
-		);
-
-		config.setValue(
-				"NOTES_DIAMETER",
-				this.getWidth() / 21
-		);
-
-		config.setValue(
-				"APP_LAST_GAME_CYCLE_TIME",
-				System.nanoTime()
-		);
-
-		config.setValue(
-				"APP_DELTA_TIME",
-				0.0
-		);
-	}
-
-	private void addUIActors() {
-		this.setBackground(WorldUtils.createWorldBackground(Color.BLACK));
-
-		// Notes rail
-		this.addObject(
-				new ImageHolder(ShapeDrawer.RectangleWithoutText(
-						this.getWidth(),
-						this.getHeight() / 5,
-						new Color(80, 80, 80, 60))),
-				this.getWidth() / 2,
-				config.getValue("ACTORS_Y_POSITION")
-		);
-
-		addDrumsButtons();
-		
-		var noteCatcherPosition = this.getWidth() / 4;
-		
-		config.setValue("NOTE_CATCHER_X_POSITION", noteCatcherPosition);
-		
-		addObject(
-				new NoteCatcher(config.getValue(Integer.class, "NOTES_DIAMETER") + 10),
-				noteCatcherPosition,
-				config.getValue("ACTORS_Y_POSITION")
-		);
-	}
-
-	private void addDrumsButtons() {
-		// TODO - Be able to change the default keys ( I can save that info on the config )
-		List<Pair<DrumType, String>> drumActors = List.of(
-				new Pair<>(DrumType.OUTER, "d"),
-				new Pair<>(DrumType.INNER, "f"),
-				new Pair<>(DrumType.INNER, "j"),
-				new Pair<>(DrumType.OUTER, "k")
-		);
-
-		int xPosition = this.getWidth() / 18;
-		int width = this.getWidth() / 32;
-		int height = this.getHeight() / 7;
-		int padding = this.getWidth() / 25;
-
-		for (int i = 0; i <= drumActors.size() - 1; i++) {
-			DrumType actorKey = drumActors.get(i).getKey();
-			String actorValue = drumActors.get(i).getValue();
-			this.addObject(
-					new Drum(width, height, actorKey, actorValue),
-					xPosition + padding * i,
-					config.getValue("ACTORS_Y_POSITION")
-			);
-		}
-	}
-
-	private Queue<NoteActor> noteModelToNoteActor(List<NoteModel> noteModel) {
-		return noteModel.stream()
-				.map(note -> new NoteActor(config.getValue("NOTES_DIAMETER"), note))
-				.collect(Collectors.toCollection(LinkedList::new));
-	}
-	//endregion
 }

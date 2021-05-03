@@ -40,7 +40,6 @@ public class MapHandler implements Handler {
 	}
 
 	public void close() {
-
 	}
 	//endregion
 
