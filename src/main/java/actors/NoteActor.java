@@ -41,7 +41,6 @@ public class NoteActor extends SmoothMover {
 		var noteCatcher = this.getWorld().getObjects(NoteCatcher.class).get(0);
 
 		if (this.intersects(noteCatcher)) {
-			System.out.println("It touch me");
 			var redKeys = List.of("f", "j");
 			if (noteModel.getNoteType().contains(NoteType.KAT)) {
 				removeObjectIfKeysPress(List.of("d", "k"));
