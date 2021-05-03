@@ -36,10 +36,6 @@ public class Menu extends World {
 		prepareWorld();
 	}
 
-	public GreenfootSound getBgMusic() {
-		return bgMusic;
-	}
-
 	public static Menu getInstance() {
 		return instance;
 	}

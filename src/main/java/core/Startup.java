@@ -30,8 +30,7 @@ public class Startup {
 
 		config.setValue("APP_WIDTH", 1280);
 		config.setValue("APP_HEIGHT", 720);
-		config.setValue(
-				"APP_DRUM_KEYS",
+		config.setValue("APP_DRUM_KEYS",
 				List.of(
 						new Pair<>(DrumType.OUTER, "d"),
 						new Pair<>(DrumType.INNER, "f"),
@@ -39,5 +38,7 @@ public class Startup {
 						new Pair<>(DrumType.OUTER, "k")
 				)
 		);
+		// This means when the last frame was called ( since the act methods are called each frame )
+		config.setValue("APP_LAST_FRAME_TIME", System.nanoTime());
 	}
 }

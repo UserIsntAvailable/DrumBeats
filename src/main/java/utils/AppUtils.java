@@ -1,4 +1,4 @@
-﻿package utils;
+package utils;
 
 import core.Config;
 
@@ -11,13 +11,10 @@ public class AppUtils {
 	/**
 	 * Get the delta time between the current frame and the last frame
 	 */
-	public static double getFramesDeltaTime() {
+	public static void refreshFramesDeltaTime() {
 		var currentTime = System.nanoTime();
-		var deltaTime = (currentTime - config.getValue(Long.class, "APP_LAST_FRAME_TIME")) / 1000000.0;
-		
+		config.setValue("APP_FRAMES_DELTA_TIME", (currentTime - config.getValue(Long.class, "APP_LAST_FRAME_TIME")) / 1000000.0);
 		config.setValue("APP_LAST_FRAME_TIME", currentTime);
-
-		return deltaTime;
 	}
 	
 	public static void refreshLastFrameTime() {

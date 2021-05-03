@@ -1,4 +1,4 @@
-﻿package utils;
+package utils;
 
 import actors.NoteActor;
 import core.Config;
@@ -22,14 +22,18 @@ public class NotesListUtils {
 				.map(note -> {
 							if (note.getTaikoNote() != TaikoNote.SPINNER) {
 								if (NoteUtils.isBigNote(note)) {
-									return new NoteActor(config.getValue(Integer.class, "NOTES_DIAMETER") * 2, note);
+									return new NoteActor(
+											(int) (
+													config.getValue(Integer.class, "NOTES_DIAMETER") *
+															config.getValue(Double.class, "BIG_NOTES_MULTIPLIER")
+											),
+											note
+									);
 								}
 								return new NoteActor(config.getValue("NOTES_DIAMETER"), note);
-
 							}
 							return null;
 						}
-				)
-				.collect(Collectors.toCollection(LinkedList::new));
+				).collect(Collectors.toCollection(LinkedList::new));
 	}
 }
