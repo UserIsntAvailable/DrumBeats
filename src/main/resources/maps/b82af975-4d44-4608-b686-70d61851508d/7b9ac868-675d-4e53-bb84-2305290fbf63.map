@@ -7,18 +7,6 @@
   "SetID": "b82af975-4d44-4608-b686-70d61851508d",
   "Notes": [
     {
-      "Time": 765,
-      "TaikoNote": 0,
-      "NoteType": 2,
-      "Params": "0,"
-    },
-    {
-      "Time": 3765,
-      "TaikoNote": 0,
-      "NoteType": 2,
-      "Params": "0,"
-    },
-    {
       "Time": 6765,
       "TaikoNote": 0,
       "NoteType": 2,
