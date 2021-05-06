@@ -7,10 +7,8 @@ import core.Config;
 import enums.DrumType;
 import graphics.ShapeDrawer;
 import greenfoot.Color;
-import greenfoot.Greenfoot;
 import greenfoot.World;
 import javafx.util.Pair;
-import worlds.Menu;
 
 import java.util.List;
 
@@ -75,10 +73,10 @@ public class PlayFieldUIHandler implements Handler {
 		int padding = world.getWidth() / 25;
 
 		for (int i = 0; i <= drumKeys.size() - 1; i++) {
-			DrumType actorKey = drumKeys.get(i).getKey();
-			String actorValue = drumKeys.get(i).getValue();
+			DrumType drumType = drumKeys.get(i).getKey();
+			String key = drumKeys.get(i).getValue();
 			world.addObject(
-					new Drum(width, height, actorKey, actorValue),
+					new Drum(width, height, drumType, key),
 					xPosition + padding * i,
 					config.getValue("ACTORS_Y_POSITION")
 			);

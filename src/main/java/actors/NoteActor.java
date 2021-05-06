@@ -1,10 +1,10 @@
 package actors;
 
+import IO.KeyboardManager;
 import core.Config;
 import enums.NoteType;
 import graphics.ShapeDrawer;
 import greenfoot.Color;
-import greenfoot.Greenfoot;
 import models.NoteModel;
 
 import java.util.List;
@@ -59,7 +59,7 @@ public class NoteActor extends SmoothMover {
 
 	private void removeObjectIfKeysPress(List<String> keys) {
 		for (var key: keys) {
-			if (Greenfoot.isKeyDown(key)) {
+			if (KeyboardManager.isKeyDown(key)) {
 				this.getWorld().removeObject(this);
 			}
 		}

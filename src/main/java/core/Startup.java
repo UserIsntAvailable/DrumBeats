@@ -38,7 +38,7 @@ public class Startup {
 						new Pair<>(DrumType.OUTER, "k")
 				)
 		);
-		// This means when the last frame was called ( since the act methods are called each frame )
+		// This means when the last frame was called
 		config.setValue("APP_LAST_FRAME_TIME", System.nanoTime());
 	}
 }
