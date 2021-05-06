@@ -3,7 +3,7 @@ package handlers;
 import actors.NoteActor;
 import core.Config;
 import models.Map;
-import utils.NotesListUtils;
+import utils.ListUtils;
 import utils.PathUtils;
 
 import java.util.Queue;
@@ -58,7 +58,7 @@ public class MapHandler implements Handler {
 
 	//region Private Methods
 	private void setNoteQueue() {
-		notesQueue = (Queue<NoteActor>) NotesListUtils.mapToNoteActor(map.getNotes());
+		notesQueue = (Queue<NoteActor>) ListUtils.mapToNoteActor(map.getNotes());
 	}
 	//endregion
 }

@@ -15,7 +15,7 @@ public class Menu extends World {
 	private static final Config config = Config.getInstance();
 	private static final Menu instance = new Menu();
 
-	private final GreenfootSound bgMusic = new GreenfootSound("menu.mid");
+	private final GreenfootSound bgMusic = new GreenfootSound("menu.wav");
 
 	private Menu() {
 		// bounded = false because I will hide actors offscreen
@@ -27,9 +27,8 @@ public class Menu extends World {
 		);
 
 		// TODO - Create logo for the game
-
-		bgMusic.setVolume(30);
-		bgMusic.playLoop();
+//		bgMusic.setVolume(50);
+//		bgMusic.playLoop();
 
 		this.setBackground(WorldUtils.createWorldBackground(new Color(43, 43, 43)));
 
