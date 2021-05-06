@@ -1,12 +1,14 @@
 package worlds;
 
 import core.Config;
+import greenfoot.Color;
 import greenfoot.World;
 import handlers.MapHandler;
 import handlers.PlayFieldUIHandler;
 import models.Map;
 import utils.AppUtils;
 import utils.NoteUtils;
+import utils.WorldUtils;
 
 /**
  * Basically where the gameplay takes place.
@@ -25,13 +27,13 @@ public class PlayField extends World {
 				false
 		);
 
+		this.setBackground(WorldUtils.createWorldBackground(Color.BLACK));
+
 		mapHandler = new MapHandler(map);
 		playFieldUIHandler = new PlayFieldUIHandler(this);
 
-		mapHandler.start();
-		playFieldUIHandler.start();
+		this.started();
 
-		AppUtils.refreshLastFrameTime();
 		timeWhenStarted = System.currentTimeMillis();
 	}
 
@@ -51,6 +53,13 @@ public class PlayField extends World {
 				notesQueue.poll();
 			}
 		}
+	}
+
+	@Override
+	public void started() {
+		mapHandler.start();
+		playFieldUIHandler.start();
+		AppUtils.refreshLastFrameTime();
 	}
 
 	@Override
