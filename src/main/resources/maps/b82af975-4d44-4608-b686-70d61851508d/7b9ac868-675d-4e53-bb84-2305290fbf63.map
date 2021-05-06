@@ -1,0 +1,2320 @@
+{
+  "Name": "Fallen Angel",
+  "Artist": "HyuN feat. JeeE",
+  "SongFileName": "audio.wav",
+  "BackgroundFileName": "",
+  "ID": "7b9ac868-675d-4e53-bb84-2305290fbf63",
+  "SetID": "b82af975-4d44-4608-b686-70d61851508d",
+  "Notes": [
+    {
+      "Time": 765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 3765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 6765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 8265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 9765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 11265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 12765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 13515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 13890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 14265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 15015,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 15390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 15765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 16515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 16890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 17265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 17452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 17827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 18015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 18296,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 18577,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 18765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 19327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 19515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 20077,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 20265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 20452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 20827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 21015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 21390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 21765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 22327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 22515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 22890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 23265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 23452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 23640,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 24015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 24390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 24765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 25515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 25890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 26265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 26452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 26827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 27015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 27390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 27577,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 27765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 28515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 28890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 29265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 29452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 29827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 30015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 30390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 30765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 31327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 31515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 31890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 32077,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 32265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 32827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 33015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 33296,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 33577,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 33765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 34327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 34515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 34796,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 35077,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 35265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 35640,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 35827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 36015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 36390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 36765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 42765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 43515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 44265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 45015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 45390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 45765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 46515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 47265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 47827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 48015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 48390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 48765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 50265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 51765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 53265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 54765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 56265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 57765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 59265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 60765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 61515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 61890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 62265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 62827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 63015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 63390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 63765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 64515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 64890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 65265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 65827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 66015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 66390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 66765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 67515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 67890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 68265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 68827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 69015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 69390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 69765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 70515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 70890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 71265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 71827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 72015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 72390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 72765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 73515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 73890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 74265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 74452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 74827,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 75015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 75390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 75765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 76327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 76515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 76890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 77265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 77452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 77733,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 78015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 78390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 78765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 79515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 79890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 80265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 80827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 81015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 81390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 81765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 82327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 82515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 83077,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 83265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 83452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 83827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 84015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 84390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 84765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 85515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 85890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 86265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 86827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 87015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 87390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 87765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 88327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 88515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 88796,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 89077,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 89265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 89827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 90015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 90390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 90765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 91515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 91890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 92265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 92827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 93015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 93390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 93765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 94327,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 94515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 95077,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 95265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 95452,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 95827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 96015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 96390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 96765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 97140,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 97515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 97890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 98640,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 99015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 99390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 99765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 100140,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 100515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 100890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 101640,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 102015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 102390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 102765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 103327,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 103515,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 103890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 104452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 104640,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 105015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 105390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 105765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 106327,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 106515,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 106890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 107265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 108015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 108390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 108765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 109515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 109890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 110265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 110827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 111015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 111202,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 111390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 111765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 112327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 112515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 113077,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 113265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 113452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 113827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 114015,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 114202,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 114390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 114765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 115515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 115890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 116265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 116827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 117015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 117202,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 117390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 117765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 118327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 118515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 119077,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 119452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 120015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 120390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 120765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 121140,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 121515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 121890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 122265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 123015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 123202,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 123390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 123765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 124140,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 124515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 124890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 125265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 125640,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 126015,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 126390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 126765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 127515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 127890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 128265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 128640,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 129015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 129202,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 129390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 129765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 129952,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 130140,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 130515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 130702,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 130890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 131265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 131827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 132390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 132765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 133515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 133890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 134265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 134452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 134827,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 135015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 135390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 135765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 136327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 136515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 136890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 137265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 137452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 137733,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 138015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 138390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 138765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 139515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 139890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 140265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 140827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 141015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 141390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 141765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 142327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 142515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 143077,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 143265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 143452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 143827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 144015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 144390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 144765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 145515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 145890,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 146265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 146827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 147015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 147390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 147765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 148327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 148515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 148796,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 149077,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 149265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 149827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 150015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 150390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 150765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 151515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 151890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 152265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 152827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 153015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 153390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 153765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 154327,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 154515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 155077,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 155265,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 155452,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 155827,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 156015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 156390,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 156765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 157140,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 157327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 157515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 157890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 158452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 158640,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 159015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 159390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 159765,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 160140,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 160327,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 160515,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 160890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 161452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 161640,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 162015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 162390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 162765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 163327,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 163515,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 163702,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 163890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 164452,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 164640,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 165015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 165390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 165765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 166327,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 166515,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 166702,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 166890,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 167265,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    },
+    {
+      "Time": 168015,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 168390,
+      "TaikoNote": 0,
+      "NoteType": 1,
+      "Params": "0,"
+    },
+    {
+      "Time": 168765,
+      "TaikoNote": 0,
+      "NoteType": 2,
+      "Params": "0,"
+    }
+  ]
+}
