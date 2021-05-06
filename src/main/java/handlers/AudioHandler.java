@@ -7,6 +7,7 @@ public class AudioHandler implements Handler {
 	
 	public AudioHandler(String filepath) {
 		audio = new GreenfootSound(filepath);
+		configure();
 	}
 
 	@Override
@@ -18,6 +19,8 @@ public class AudioHandler implements Handler {
 
 	@Override
 	public void configure() {
+		// I will not bother setting the audio for each sound
+		audio.setVolume(20);
 	}
 
 	@Override

@@ -6,11 +6,11 @@ public class PathUtils {
 	public PathUtils() {
 	}
 
-	public static String getMapFromResources(String mapSetID, String mapID) {
+	public static String getResourceFromMap(String mapSetID, String resourceName) {
 		return Objects.requireNonNull(
 				PathUtils.class
 						.getClassLoader()
-						.getResource("maps/" + mapSetID + "/" + mapID))
+						.getResource("maps/" + mapSetID + "/" + resourceName))
 				.getPath();
 	}
 }

@@ -4,6 +4,7 @@ import actors.NoteActor;
 import core.Config;
 import models.Map;
 import utils.NotesListUtils;
+import utils.PathUtils;
 
 import java.util.Queue;
 
@@ -13,6 +14,7 @@ import java.util.Queue;
 public class MapHandler implements Handler {
 	//region Private Fields
 	private final Map map;
+	private final AudioHandler audioHandler;
 	private final Config config = Config.getInstance();
 
 	private Queue<NoteActor> notesQueue;
@@ -21,16 +23,20 @@ public class MapHandler implements Handler {
 	//region Constructor
 	public MapHandler(Map map) {
 		this.map = map;
+		this.audioHandler = new AudioHandler(
+				PathUtils.getResourceFromMap(
+						map.getSetID(),
+						map.getSongFilename()
+				)
+		);
 		configure();
-		//TODO - Create a BGSoundHandler?
 	}
 	//endregion
 
 	//region Handler
 	public long start() {
 		setNoteQueue();
-
-		return System.nanoTime();
+		return audioHandler.start();
 	}
 
 	public void configure() {
@@ -40,6 +46,7 @@ public class MapHandler implements Handler {
 	}
 
 	public void close() {
+		audioHandler.close();
 	}
 	//endregion
 
