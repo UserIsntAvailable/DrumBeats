@@ -6,9 +6,10 @@ import greenfoot.Color;
 import greenfoot.GreenfootImage;
 
 public class WorldUtils {
-	private static final Config config = Config.getInstance();
+	private static Config config = Config.getInstance();
 
-	public WorldUtils() {
+	public WorldUtils(Config config) {
+		WorldUtils.config = config;
 	}
 
 	public static GreenfootImage createWorldBackground(Color color) {

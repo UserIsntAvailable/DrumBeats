@@ -4,9 +4,10 @@ import core.Config;
 import models.NoteModel;
 
 public class NoteUtils {
-	public static Config config = Config.getInstance();
+	private static Config config = Config.getInstance();
 
-	public NoteUtils() {
+	public NoteUtils(Config config) {
+		NoteUtils.config = config;
 	}
 
 	public static boolean isBigNote(NoteModel note) {

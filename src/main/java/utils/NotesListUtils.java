@@ -11,9 +11,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class NotesListUtils {
-	public static Config config = Config.getInstance();
+	private static Config config = Config.getInstance();
 
-	public NotesListUtils() {
+	public NotesListUtils(Config config) {
+		NotesListUtils.config = config;
 	}
 
 	public static Collection<NoteActor> mapToNoteActor(List<NoteModel> noteModel) {

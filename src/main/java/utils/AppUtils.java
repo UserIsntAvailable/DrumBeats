@@ -3,9 +3,10 @@ package utils;
 import core.Config;
 
 public class AppUtils {
-	public static Config config = Config.getInstance();
+	private static Config config = Config.getInstance();
 	
-	public AppUtils() {
+	public AppUtils(Config config) {
+		AppUtils.config = config;
 	}
 
 	/**
