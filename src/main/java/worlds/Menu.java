@@ -28,8 +28,8 @@ public class Menu extends World {
 
 		// TODO - Create logo for the game
 
-//		bgMusic.setVolume(30);
-//		bgMusic.playLoop();
+		bgMusic.setVolume(30);
+		bgMusic.playLoop();
 
 		this.setBackground(WorldUtils.createWorldBackground(new Color(43, 43, 43)));
 

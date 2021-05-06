@@ -10,13 +10,13 @@ import worlds.PlayField;
 
 public class Button extends Actor {
 	// I will keep the image just in case that I need it later
-	private final GreenfootImage _image;
+	private final GreenfootImage image;
 
 	public Button(int width, int height, Color background,
 	              String text, Font font, Color textColor) {
-		_image = ShapeDrawer.Rectangle(width, height, background, text, font, textColor);
+		image = ShapeDrawer.Rectangle(width, height, background, text, font, textColor);
 
-		setImage(_image);
+		setImage(image);
 	}
 
 	public void act() {
@@ -24,9 +24,9 @@ public class Button extends Actor {
 			// TODO - Refactor this into a Event Listener that changes the actors on screen depending on what button is clicked
 			
 			// Testing of course
-			String mapFilePath = PathUtils.getMapFromResources(
-					"4a6c00e3-06d8-4b48-babc-7ba32060252c",
-					"7d1c794f-78d7-4589-aa1e-35651932771b.map"
+			String mapFilePath = PathUtils.getResourceFromMap(
+					"b82af975-4d44-4608-b686-70d61851508d",
+					"7b9ac868-675d-4e53-bb84-2305290fbf63.map"
 			);
 			Map map = MapJsonParser.parse(mapFilePath);
 
