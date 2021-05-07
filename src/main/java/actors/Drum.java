@@ -6,7 +6,7 @@ import graphics.ShapeDrawer;
 import greenfoot.Actor;
 import greenfoot.Color;
 import greenfoot.GreenfootImage;
-import greenfoot.GreenfootSound;
+import utils.SoundUtils;
 
 import java.util.Locale;
 
@@ -32,11 +32,14 @@ public class Drum extends Actor {
 			   to false the key before the next frame happens ( as a solution I can just
 			    create an instance of KeyboardManager for each object that needs it.... )
 			 */
-			playHitsound();
+			SoundUtils.playSound(
+					"drum-" + type.name().toLowerCase(Locale.ENGLISH) + "-hitsound.wav",
+					70
+			);
 			// TODO - I need to set up a ImageCache and get the images
 			// This is just for testing
 			image = ShapeDrawer.RectangleWithoutText(
-					width, height, getColorByDrumType());
+					width, height, this.getColorByDrumType());
 		}
 		else {
 			image = ShapeDrawer.RectangleWithoutText(
@@ -44,12 +47,6 @@ public class Drum extends Actor {
 		}
 
 		this.setImage(image);
-	}
-
-	private void playHitsound() {
-		var hitSound = new GreenfootSound("drum-" + type.name().toLowerCase(Locale.ENGLISH) + "-hitsound.wav");
-		hitSound.setVolume(70);
-		hitSound.play();
 	}
 
 	private Color getColorByDrumType() {
