@@ -34,7 +34,7 @@ public class Drum extends Actor {
 			// TODO - I need to set up a ImageCache and get the images
 			// This is just for testing
 			image = ShapeDrawer.RectangleWithoutText(
-					width, height, this.getColorByDrumType());
+					width, height, type.getColor());
 		}
 		else {
 			image = ShapeDrawer.RectangleWithoutText(
@@ -42,15 +42,5 @@ public class Drum extends Actor {
 		}
 
 		this.setImage(image);
-	}
-
-	private Color getColorByDrumType() {
-		switch (type) {
-			case INNER:
-				return Color.RED;
-			case OUTER:
-				return Color.BLUE;
-		}
-		return null;
 	}
 }

@@ -6,7 +6,6 @@ import enums.NoteType;
 import enums.TaikoNote;
 import models.NoteModel;
 
-import java.util.EnumSet;
 import java.util.List;
 
 public class NoteUtils {
@@ -45,10 +44,10 @@ public class NoteUtils {
 		if (note.getTaikoNote().equals(TaikoNote.SLIDER))
 			return ListUtils.mapToKeyStrings(config.getValue("APP_DRUM_KEYS"));
 
-		return AppUtils.getDrumKeys(mapNoteTypeToDrumType(note.getNoteType()));
+		return AppUtils.getDrumKeys(getDrumType(note));
 	}
 
-	private static DrumType mapNoteTypeToDrumType(EnumSet<NoteType> noteTypes) {
-		return noteTypes.contains(NoteType.KAT) ? DrumType.OUTER : DrumType.INNER;
+	public static DrumType getDrumType(NoteModel note) {
+		return note.getNoteType().contains(NoteType.KAT) ? DrumType.OUTER : DrumType.INNER;
 	}
 }

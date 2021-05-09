@@ -1,10 +1,9 @@
 package actors;
 
 import core.Config;
-import enums.NoteType;
 import graphics.ShapeDrawer;
-import greenfoot.Color;
 import models.NoteModel;
+import utils.NoteUtils;
 
 public class NoteActor extends SmoothMover {
 	private final NoteModel noteModel;
@@ -15,9 +14,7 @@ public class NoteActor extends SmoothMover {
 
 		// TODO - Set a different image depending in the taikoNote
 		// TODO - Refactor this pls.....
-		var noteColor = noteModel.getNoteType().contains(NoteType.KAT)
-				? Color.BLUE
-				: Color.RED;
+		var noteColor = NoteUtils.getDrumType(noteModel).getColor();
 		switch (noteModel.getTaikoNote()) {
 			case CIRCLE:
 				setImage(ShapeDrawer.CircleWithoutText(diameter, noteColor));
