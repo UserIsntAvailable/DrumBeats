@@ -4,6 +4,9 @@ import enums.DrumType;
 import greenfoot.core.ImageCache;
 import javafx.util.Pair;
 
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -17,6 +20,16 @@ public class Startup {
 	public static void setUpApplication() {
 		setUpConfig();
 		setUpImageCache();
+		setUpAwtStuff();
+	}
+
+	private static void setUpAwtStuff() {
+		try {
+			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+			ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("C:\\Users\\Angel\\Downloads\\comicbd.ttf")));
+		} catch (IOException | FontFormatException e) {
+			//Handle exception
+		}
 	}
 
 	private static void setUpImageCache() {

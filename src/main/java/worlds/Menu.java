@@ -2,6 +2,7 @@ package worlds;
 
 import actors.Button;
 import core.Config;
+import graphics.Text;
 import greenfoot.*;
 import models.Map;
 import parsers.MapJsonParser;
@@ -44,11 +45,15 @@ public class Menu extends World {
 		// TODO - Create helper methods for the creation of buttons ( I will probably need padding, margin, and grids... )
 
 		// This is a test to have the bare minimum to enter the play area
-		this.showText("Play Field", this.getWidth() / 2, this.getHeight() / 2);
 		addObject(
 				new Button(
 						400, 60, Color.WHITE,
-						"", new Font(69), Color.RED,
+						new Text(
+								"Play Field",
+								new Font("Comic Sans MS Bold", 45),
+								Color.BLACK,
+								Color.BLACK
+						),
 						() -> {
 							// Testing of course
 							String mapFilePath = PathUtils.getResourceFromMap(

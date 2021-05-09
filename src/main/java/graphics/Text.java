@@ -1,4 +1,4 @@
-﻿package graphics;
+package graphics;
 
 import utils.GreenfootToAwtUtils;
 
@@ -43,7 +43,7 @@ public class Text {
 	//region Public Methods
 	public static Text getDefault() {
 		return new Text(
-				"Lorem Ipsum",
+				"",
 				new greenfoot.Font(14),
 				greenfoot.Color.WHITE,
 				greenfoot.Color.BLACK
