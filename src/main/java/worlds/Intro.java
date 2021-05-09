@@ -4,6 +4,7 @@ import actors.ImageHolder;
 import core.Config;
 import core.Startup;
 import greenfoot.Greenfoot;
+import greenfoot.GreenfootImage;
 import greenfoot.World;
 import utils.GifImage;
 
@@ -12,7 +13,7 @@ import utils.GifImage;
  */
 public class Intro extends World {
 	private final GifImage gifImage;
-	// I need this because World.setBackground duplicates the image until it fits the world dimensions
+	private final GreenfootImage firstFrame;
 	private final ImageHolder gifImageHolder;
 
 	static {
@@ -27,12 +28,9 @@ public class Intro extends World {
 				config.getValue("APP_HEIGHT"),
 				1
 		);
-
-		// TODO - Create a GIF for the game
-
-		// This is just for testing...
-		gifImage = new GifImage("pretty-gif.gif");
-		gifImageHolder = new ImageHolder(gifImage.getCurrentImage());
+		gifImage = new GifImage("splash-screen.gif");
+		firstFrame = gifImage.getCurrentImage();
+		gifImageHolder = new ImageHolder(firstFrame);
 		this.addObject(
 				gifImageHolder,
 				this.getWidth() / 2,
@@ -42,9 +40,14 @@ public class Intro extends World {
 
 	@Override
 	public void act() {
-		gifImageHolder.setImage(gifImage.getCurrentImage());
-		if (Greenfoot.isKeyDown("space") || Greenfoot.mouseClicked(null)) {
+		var gifFrame = gifImage.getCurrentImage();
+		if (gifFrame.equals(firstFrame) ||
+				Greenfoot.isKeyDown("space") ||
+				Greenfoot.mouseClicked(null)) {
+
 			Greenfoot.setWorld(Menu.getInstance());
+			return;
 		}
+		gifImageHolder.setImage(gifFrame);
 	}
 }

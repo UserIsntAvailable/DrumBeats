@@ -446,7 +446,6 @@ public class GifImage {
 		/**
 		 * Reads GIF image from stream
 		 *
-		 * @param BufferedInputStream containing GIF file.
 		 * @return read status code (0 = no errors)
 		 */
 		public int read(BufferedInputStream is) {
@@ -474,7 +473,6 @@ public class GifImage {
 		/**
 		 * Reads GIF image from stream
 		 *
-		 * @param InputStream containing GIF file.
 		 * @return read status code (0 = no errors)
 		 */
 		public int read(InputStream is) {
@@ -946,5 +944,4 @@ public class GifImage {
 			} while ((blockSize > 0) && !err());
 		}
 	}
-
 }
