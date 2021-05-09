@@ -1,7 +1,9 @@
 package worlds;
 
 import actors.Button;
+import actors.ImageHolder;
 import core.Config;
+import graphics.ShapeDrawer;
 import graphics.Text;
 import greenfoot.*;
 import models.Map;
@@ -27,7 +29,6 @@ public class Menu extends World {
 				false
 		);
 
-		// TODO - Create logo for the game
 //		bgMusic.setVolume(50);
 //		bgMusic.playLoop();
 
@@ -45,7 +46,23 @@ public class Menu extends World {
 		// TODO - Create helper methods for the creation of buttons ( I will probably need padding, margin, and grids... )
 
 		// This is a test to have the bare minimum to enter the play area
-		addObject(
+		this.addObject(
+				new ImageHolder(
+						ShapeDrawer.Rectangle(
+								400, 50, new Color(0, 0, 0, 0),
+								new Text(
+										"DRUMBEATS",
+										new Font("Arial Rounded MT Bold", 72),
+										Color.BLACK,
+										Color.BLACK
+								)
+						)
+				),
+				this.getWidth() / 2,
+				this.getHeight() / 4
+		);
+
+		this.addObject(
 				new Button(
 						400, 60, Color.WHITE,
 						new Text(
