@@ -50,7 +50,7 @@ public class NoteCatcher extends Actor {
 	}
 
 	private boolean isNoteInMissArea(NoteActor note) {
-		return note.getExactX() + note.getImage().getWidth() <= this.getX();
+		return note.getExactX() + note.getImage().getWidth() / 1.5 <= this.getX();
 	}
 
 	private void handleKeyStrokes(NoteActor note) {
@@ -84,11 +84,13 @@ public class NoteCatcher extends Actor {
 			case 4:
 				// TODO - Handle spinners
 				break;
+			// Double notes are really hard to hit with both keys, I guess that shouldn't be a problem, right?
 			case 2:
-				// TODO - Handle big notes
-				break;
 			case 1:
 				this.removeNoteFromWorld(note, () -> {
+					if (NoteUtils.isBigNote(note.getNoteModel())) {
+						SoundUtils.playSound("drum-big-notes-hitsound.wav", 80);
+					}
 					// TODO - Show how precise the click was
 				});
 				break;

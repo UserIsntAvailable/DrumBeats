@@ -18,7 +18,7 @@ public class KeyboardManager {
 	}
 
 	public static boolean isKeyDown(String key) {
-		return isKeyDown(key, 17);
+		return isKeyDown(key, 32);
 	}
 
 	public static boolean isKeyDown(String key, double pressTime) {

@@ -34,7 +34,7 @@
       "Time": 12765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 13515,
@@ -232,7 +232,7 @@
       "Time": 24765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 25515,
@@ -454,13 +454,13 @@
       "Time": 36765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 42765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 43515,
@@ -526,7 +526,7 @@
       "Time": 48765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 50265,
@@ -574,7 +574,7 @@
       "Time": 60765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 61515,
@@ -742,7 +742,7 @@
       "Time": 72765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 73515,
@@ -940,7 +940,7 @@
       "Time": 84765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 85515,
@@ -1132,7 +1132,7 @@
       "Time": 96765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 97140,
@@ -1216,7 +1216,7 @@
       "Time": 102765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 103327,
@@ -1264,7 +1264,7 @@
       "Time": 105765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 106327,
@@ -1288,25 +1288,25 @@
       "Time": 107265,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 108015,
       "TaikoNote": 0,
       "NoteType": 1,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 108390,
       "TaikoNote": 0,
       "NoteType": 1,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 108765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 109515,
@@ -1414,7 +1414,7 @@
       "Time": 114765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 115515,
@@ -1486,25 +1486,25 @@
       "Time": 119452,
       "TaikoNote": 0,
       "NoteType": 1,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 120015,
       "TaikoNote": 0,
       "NoteType": 1,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 120390,
       "TaikoNote": 0,
       "NoteType": 1,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 120765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 121140,
@@ -1600,7 +1600,7 @@
       "Time": 126765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 127515,
@@ -1684,25 +1684,25 @@
       "Time": 131265,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 131827,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 132390,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 132765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 133515,
@@ -1900,7 +1900,7 @@
       "Time": 144765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 145515,
@@ -2092,7 +2092,7 @@
       "Time": 156765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 157140,
@@ -2200,7 +2200,7 @@
       "Time": 162765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 163327,
@@ -2254,7 +2254,7 @@
       "Time": 165765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 166327,
@@ -2284,25 +2284,25 @@
       "Time": 167265,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 168015,
       "TaikoNote": 0,
       "NoteType": 1,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 168390,
       "TaikoNote": 0,
       "NoteType": 1,
-      "Params": "0,"
+      "Params": "1,"
     },
     {
       "Time": 168765,
       "TaikoNote": 0,
       "NoteType": 2,
-      "Params": "0,"
+      "Params": "1,"
     }
   ]
 }

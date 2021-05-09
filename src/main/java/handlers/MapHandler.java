@@ -42,7 +42,7 @@ public class MapHandler implements Handler {
 	public void configure() {
 		config.setValue("NOTES_DIAMETER", config.getValue(Integer.class, "APP_WIDTH") / 20);
 		config.setValue("NOTES_MOVEMENT_SPEED", config.getValue(Integer.class, "APP_WIDTH") / -5120.0);
-		config.setValue("BIG_NOTES_MULTIPLIER", config.getValue(Integer.class, "APP_HEIGHT") / 850.0);
+		config.setValue("BIG_NOTES_MULTIPLIER", config.getValue(Integer.class, "APP_WIDTH") / 1000.0);
 	}
 
 	public void close() {

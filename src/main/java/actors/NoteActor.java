@@ -17,7 +17,7 @@ public class NoteActor extends SmoothMover {
 		var noteColor = NoteUtils.getDrumType(noteModel).getColor();
 		switch (noteModel.getTaikoNote()) {
 			case CIRCLE:
-				setImage(ShapeDrawer.CircleWithoutText(diameter, noteColor));
+				setImage(ShapeDrawer.CircleWithoutText((int) NoteUtils.getNoteDiameter(noteModel), noteColor));
 				break;
 			case SLIDER:
 				break;
