@@ -13,10 +13,6 @@ public class WorldUtils {
 	}
 
 	public static GreenfootImage createWorldBackground(Color color) {
-		return ShapeDrawer.Rectangle(
-				config.getValue("APP_WIDTH"),
-				config.getValue("APP_HEIGHT"),
-				color,
-				"", null, null);
+		return ShapeDrawer.CircleWithoutText(config.getValue("APP_WIDTH"), config.getValue("APP_HEIGHT"));
 	}
 }
