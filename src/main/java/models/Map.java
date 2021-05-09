@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-// TODO - I can create a Hash property to know if the map was changed once created ( not really need it here tho )
 public class Map {
 	//region Private Fields
 

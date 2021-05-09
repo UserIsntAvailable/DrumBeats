@@ -54,8 +54,6 @@ public class NoteCatcher extends Actor {
 	}
 
 	private void handleKeyStrokes(NoteActor note) {
-		//TODO - Handle sliders and spinners
-
 		verifyKeyStates(note, getDrumKeyStates(note.getNoteModel()));
 	}
 

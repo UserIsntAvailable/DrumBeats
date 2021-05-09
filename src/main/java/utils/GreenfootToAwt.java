@@ -5,7 +5,7 @@ import java.awt.*;
 /**
  * I don't why I do this. I guess I should "force" myself to use Greenfoot framework....
  */
-public class GreenfootToAwtUtils {
+public class GreenfootToAwt {
 
 	public static java.awt.Font mapFont(greenfoot.Font font) {
 		int style = 0;

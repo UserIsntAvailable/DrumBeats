@@ -1,6 +1,6 @@
 package graphics;
 
-import utils.GreenfootToAwtUtils;
+import utils.GreenfootToAwt;
 
 /**
  * A class representing text. ( I use this because I'm tired of having so much parameters on {@link ShapeDrawer} methods ).
@@ -16,9 +16,9 @@ public class Text {
 	//region Constructor
 	public Text(String text, greenfoot.Font font, greenfoot.Color textColor, greenfoot.Color outlineColor) {
 		this.text = text;
-		this.font = GreenfootToAwtUtils.mapFont(font);
-		this.textColor = GreenfootToAwtUtils.mapColor(textColor);
-		this.outlineColor = GreenfootToAwtUtils.mapColor(outlineColor);
+		this.font = GreenfootToAwt.mapFont(font);
+		this.textColor = GreenfootToAwt.mapColor(textColor);
+		this.outlineColor = GreenfootToAwt.mapColor(outlineColor);
 	}
 	//endregion
 
