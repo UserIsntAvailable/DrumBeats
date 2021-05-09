@@ -20,16 +20,6 @@ public class Startup {
 	public static void setUpApplication() {
 		setUpConfig();
 		setUpImageCache();
-		setUpAwtStuff();
-	}
-
-	private static void setUpAwtStuff() {
-		try {
-			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-			ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("C:\\Users\\Angel\\Downloads\\comicbd.ttf")));
-		} catch (IOException | FontFormatException e) {
-			//Handle exception
-		}
 	}
 
 	private static void setUpImageCache() {
