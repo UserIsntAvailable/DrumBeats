@@ -89,7 +89,10 @@ public class NoteCatcher extends Actor {
 			case 1:
 				this.removeNoteFromWorld(note, () -> {
 					if (NoteUtils.isBigNote(note.getNoteModel())) {
-						SoundUtils.playSound("drum-big-notes-hitsound.wav", 80);
+						SoundUtils.playSound(
+								"drum-big-notes-hitsound.wav",
+								config.getValue(Integer.class, "HITSOUNDS_BASE_VOLUME") + 10
+						);
 					}
 					// TODO - Show how precise the click was
 				});

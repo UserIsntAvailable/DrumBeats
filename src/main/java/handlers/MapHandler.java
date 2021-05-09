@@ -40,6 +40,7 @@ public class MapHandler implements Handler {
 	}
 
 	public void configure() {
+		config.setValue("HITSOUNDS_BASE_VOLUME", 70);
 		config.setValue("NOTES_DIAMETER", config.getValue(Integer.class, "APP_WIDTH") / 20);
 		config.setValue("NOTES_MOVEMENT_SPEED", config.getValue(Integer.class, "APP_WIDTH") / -5120.0);
 		config.setValue("BIG_NOTES_MULTIPLIER", config.getValue(Integer.class, "APP_WIDTH") / 1000.0);

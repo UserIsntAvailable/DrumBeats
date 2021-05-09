@@ -1,6 +1,7 @@
 package actors;
 
 import IO.KeyboardManager;
+import core.Config;
 import enums.DrumType;
 import graphics.ShapeDrawer;
 import greenfoot.Actor;
@@ -15,6 +16,7 @@ public class Drum extends Actor {
 	private final int height;
 	private final DrumType type;
 	private final String key;
+	private final Config config = Config.getInstance();
 
 	public Drum(int width, int height, DrumType type, String key) {
 		this.width = width;
@@ -29,7 +31,7 @@ public class Drum extends Actor {
 		if (KeyboardManager.isKeyDown(key)) {
 			SoundUtils.playSound(
 					"drum-" + type.name().toLowerCase(Locale.ENGLISH) + "-hitsound.wav",
-					70
+					config.getValue("HITSOUNDS_BASE_VOLUME")
 			);
 			// TODO - I need to set up a ImageCache and get the images
 			// This is just for testing
