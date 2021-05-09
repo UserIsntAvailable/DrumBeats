@@ -1,7 +1,13 @@
 package utils;
 
 import core.Config;
+import enums.DrumType;
+import enums.NoteType;
+import enums.TaikoNote;
 import models.NoteModel;
+
+import java.util.EnumSet;
+import java.util.List;
 
 public class NoteUtils {
 	private static Config config = Config.getInstance();
@@ -19,7 +25,7 @@ public class NoteUtils {
 			return config.getValue(Integer.class, "NOTES_DIAMETER")
 					* config.getValue(Double.class, "BIG_NOTES_MULTIPLIER");
 		}
-		return config.getValue(Integer.class,"NOTES_DIAMETER");
+		return config.getValue(Integer.class, "NOTES_DIAMETER");
 	}
 
 	public static double getNoteOffsetTime(NoteModel note) {
@@ -30,5 +36,19 @@ public class NoteUtils {
 				- config.getValue(Integer.class, "NOTE_CATCHER_X_POSITION");
 
 		return noteTravelDistance / config.getValue(Double.class, "NOTES_MOVEMENT_SPEED");
+	}
+
+	/**
+	 * Get the keys that should be pressed to count as a good hit for that note.
+	 */
+	public static List<String> getNoteKeys(NoteModel note) {
+		if (note.getTaikoNote().equals(TaikoNote.SLIDER))
+			return ListUtils.mapToKeyStrings(config.getValue("APP_DRUM_KEYS"));
+
+		return AppUtils.getDrumKeys(mapNoteTypeToDrumType(note.getNoteType()));
+	}
+
+	private static DrumType mapNoteTypeToDrumType(EnumSet<NoteType> noteTypes) {
+		return noteTypes.contains(NoteType.KAT) ? DrumType.OUTER : DrumType.INNER;
 	}
 }

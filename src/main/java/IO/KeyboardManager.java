@@ -4,6 +4,7 @@ import core.Config;
 import greenfoot.Greenfoot;
 
 import java.util.HashMap;
+import java.util.List;
 
 // Special thanks to Nenikitov ( one of my friends )
 public class KeyboardManager {
@@ -17,7 +18,7 @@ public class KeyboardManager {
 	}
 
 	public static boolean isKeyDown(String key) {
-		return isKeyDown(key, config.getValue(Double.class, "APP_FRAMES_DELTA_TIME")  * 2.1);
+		return isKeyDown(key, 17);
 	}
 
 	public static boolean isKeyDown(String key, double pressTime) {
@@ -41,5 +42,15 @@ public class KeyboardManager {
 			keysClickedTime.put(key, keysClickedTime.get(key) - config.getValue(Double.class, "APP_FRAMES_DELTA_TIME"));
 
 		return keysClickedTime.get(key) > 0;
+	}
+
+	public static HashMap<String, Boolean> areKeysDown(List<String> keys) {
+		var notesStates = new HashMap<String, Boolean>();
+
+		keys.forEach(key -> {
+			notesStates.put(key, keysClickedTime.get(key) > 0);
+		});
+
+		return notesStates;
 	}
 }

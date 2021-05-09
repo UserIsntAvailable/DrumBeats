@@ -11,4 +11,8 @@ public class SoundUtils {
 		sound.setVolume(volume);
 		sound.play();
 	}
+
+	public static void playMissSound() {
+		SoundUtils.playSound("miss.wav", 55);
+	}
 }
