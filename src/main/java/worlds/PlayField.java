@@ -40,9 +40,8 @@ public class PlayField extends World {
 	@Override
 	public void act() {
 		AppUtils.refreshFramesDeltaTime();
-		var notesQueue = mapHandler.getNoteQueue();
-		if (notesQueue.size() > 0) {
-			var note = notesQueue.peek();
+		var note = mapHandler.peekNextNote();
+		if (note != null) {
 			var noteModel = note.getNoteModel();
 			if (noteModel.getTime() <= System.currentTimeMillis() - timeWhenStarted - NoteUtils.getNoteOffsetTime(noteModel)) {
 				this.addObject(
@@ -50,7 +49,7 @@ public class PlayField extends World {
 						(int) (this.getWidth() + NoteUtils.getNoteDiameter(noteModel) / 2),
 						config.getValue("ACTORS_Y_POSITION")
 				);
-				notesQueue.poll();
+				mapHandler.removeNextNote();
 			}
 		}
 	}

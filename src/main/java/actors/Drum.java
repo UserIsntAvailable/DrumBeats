@@ -27,11 +27,6 @@ public class Drum extends Actor {
 	public void act() {
 		GreenfootImage image;
 		if (KeyboardManager.isKeyDown(key)) {
-			/*
-			 BUG - The hitsound plays twice because the isKeyDown is not fast enough
-			   to false the key before the next frame happens ( as a solution I can just
-			    create an instance of KeyboardManager for each object that needs it.... )
-			 */
 			SoundUtils.playSound(
 					"drum-" + type.name().toLowerCase(Locale.ENGLISH) + "-hitsound.wav",
 					70

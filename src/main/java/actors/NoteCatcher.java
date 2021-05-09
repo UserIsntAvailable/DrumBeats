@@ -23,7 +23,6 @@ public class NoteCatcher extends Actor {
 	// region Public Methods
 	@Override
 	public void act() {
-		// TODO - Refactor this
 		var noteActors = this.getWorld().getObjects(NoteActor.class);
 		if (noteActors.size() > 0) {
 			var closestNote = noteActors.get(0);

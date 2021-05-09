@@ -17,7 +17,7 @@ public class MapHandler implements Handler {
 	private final AudioHandler audioHandler;
 	private final Config config = Config.getInstance();
 
-	private Queue<NoteActor> notesQueue;
+	private Queue<NoteActor> mapNotesQueue;
 	//endregion
 
 	//region Constructor
@@ -35,7 +35,7 @@ public class MapHandler implements Handler {
 
 	//region Handler
 	public long start() {
-		setNoteQueue();
+		setMapNotesQueue();
 		return audioHandler.start();
 	}
 
@@ -51,14 +51,20 @@ public class MapHandler implements Handler {
 	//endregion
 
 	//region Public Methods
-	public Queue<NoteActor> getNoteQueue() {
-		return notesQueue;
+	public NoteActor peekNextNote() {
+		return mapNotesQueue.size() > 0 
+				? mapNotesQueue.peek() 
+				: null;
+	}
+
+	public void removeNextNote() {
+		mapNotesQueue.poll();
 	}
 	//endregion
 
 	//region Private Methods
-	private void setNoteQueue() {
-		notesQueue = (Queue<NoteActor>) ListUtils.mapToNoteActor(map.getNotes());
+	private void setMapNotesQueue() {
+		mapNotesQueue = (Queue<NoteActor>) ListUtils.mapToNoteActor(map.getNotes());
 	}
 	//endregion
 }
