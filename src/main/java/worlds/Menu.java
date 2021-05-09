@@ -2,10 +2,10 @@ package worlds;
 
 import actors.Button;
 import core.Config;
-import greenfoot.Color;
-import greenfoot.Font;
-import greenfoot.GreenfootSound;
-import greenfoot.World;
+import greenfoot.*;
+import models.Map;
+import parsers.MapJsonParser;
+import utils.PathUtils;
 import utils.WorldUtils;
 
 public class Menu extends World {
@@ -48,7 +48,17 @@ public class Menu extends World {
 		addObject(
 				new Button(
 						400, 60, Color.WHITE,
-						"", new Font(69), Color.RED
+						"", new Font(69), Color.RED,
+						() -> {
+							// Testing of course
+							String mapFilePath = PathUtils.getResourceFromMap(
+									"b82af975-4d44-4608-b686-70d61851508d",
+									"7b9ac868-675d-4e53-bb84-2305290fbf63.map"
+							);
+							Map map = MapJsonParser.parse(mapFilePath);
+
+							Greenfoot.setWorld(new PlayField(map));
+						}
 				),
 				this.getWidth() / 2,
 				this.getHeight() / 2

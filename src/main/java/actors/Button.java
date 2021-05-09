@@ -1,36 +1,24 @@
 package actors;
 
+import core.Action;
 import graphics.ShapeDrawer;
-import greenfoot.*;
-import models.Map;
-import parsers.MapJsonParser;
-import utils.PathUtils;
-import worlds.PlayField;
+import greenfoot.Actor;
+import greenfoot.Color;
+import greenfoot.Font;
+import greenfoot.Greenfoot;
 
 
 public class Button extends Actor {
-	// I will keep the image just in case that I need it later
-	private final GreenfootImage image;
+	private final Action action;
 
-	public Button(int width, int height, Color background,
-	              String text, Font font, Color textColor) {
-		image = ShapeDrawer.Rectangle(width, height, background, text, font, textColor);
-
-		setImage(image);
+	public Button(int width, int height, Color background, String text, Font font, Color textColor, Action action) {
+		setImage(ShapeDrawer.Rectangle(width, height, background, text, font, textColor));
+		this.action = action;
 	}
 
 	public void act() {
 		if (Greenfoot.mouseClicked(this)) {
-			// TODO - Refactor this into a Event Listener that changes the actors on screen depending on what button is clicked
-			
-			// Testing of course
-			String mapFilePath = PathUtils.getResourceFromMap(
-					"b82af975-4d44-4608-b686-70d61851508d",
-					"7b9ac868-675d-4e53-bb84-2305290fbf63.map"
-			);
-			Map map = MapJsonParser.parse(mapFilePath);
-
-			Greenfoot.setWorld(new PlayField(map));
+			action.execute();
 		}
 	}
 }
