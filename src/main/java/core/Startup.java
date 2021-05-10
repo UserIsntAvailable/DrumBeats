@@ -2,6 +2,9 @@ package core;
 
 import enums.DrumType;
 import greenfoot.core.ImageCache;
+import greenfoot.core.WorldHandler;
+import greenfoot.event.WorldEvent;
+import greenfoot.event.WorldListener;
 import javafx.util.Pair;
 
 import java.util.List;
@@ -17,6 +20,7 @@ public class Startup {
 	public static void setUpApplication() {
 		setUpConfig();
 		setUpImageCache();
+		setUpWorldEvents();
 	}
 
 	private static void setUpImageCache() {
@@ -40,5 +44,21 @@ public class Startup {
 		);
 		// This means when the last frame was called
 		config.setValue("APP_LAST_FRAME_TIME", System.nanoTime());
+	}
+
+	private static void setUpWorldEvents() {
+		WorldHandler.getInstance().addWorldListener(
+				new WorldListener() {
+					@Override
+					public void worldCreated(WorldEvent worldEvent) {
+						worldEvent.getWorld().started();
+					}
+
+					@Override
+					public void worldRemoved(WorldEvent worldEvent) {
+						worldEvent.getWorld().stopped();
+					}
+				}
+		);
 	}
 }

@@ -31,8 +31,6 @@ public class PlayField extends World {
 
 		mapHandler = new MapHandler(map);
 		playFieldUIHandler = new PlayFieldUIHandler(this);
-
-		started();
 	}
 
 	@Override

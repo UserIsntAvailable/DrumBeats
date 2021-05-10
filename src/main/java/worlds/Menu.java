@@ -5,7 +5,10 @@ import actors.ImageHolder;
 import core.Config;
 import graphics.ShapeDrawer;
 import graphics.Text;
-import greenfoot.*;
+import greenfoot.Color;
+import greenfoot.Font;
+import greenfoot.GreenfootSound;
+import greenfoot.World;
 import models.Map;
 import parsers.MapJsonParser;
 import utils.PathUtils;
@@ -27,22 +30,20 @@ public class Menu extends World {
 				false
 		);
 
-//		bgMusic.setVolume(50);
-//		bgMusic.playLoop();
+		bgMusic.setVolume(50);
+		bgMusic.playLoop();
 
 		this.setBackground(WorldUtils.createWorldBackground(new Color(43, 43, 43)));
-
-		prepareWorld();
 	}
 
 	public static Menu getInstance() {
 		return instance;
 	}
 
-	private void prepareWorld() {
+	@Override
+	public void started() {
 		// Since this is the Menu World, I will create all menu actors ( not play area ones ) off screen
 		// TODO - Create helper methods for the creation of buttons ( I will probably need padding, margin, and grids... )
-
 		this.addObject(
 				new ImageHolder(
 						ShapeDrawer.Rectangle(
@@ -77,11 +78,16 @@ public class Menu extends World {
 							);
 							Map map = MapJsonParser.parse(mapFilePath);
 
-							Greenfoot.setWorld(new PlayField(map));
+							WorldUtils.setWorld(this, new PlayField(map));
 						}
 				),
 				this.getWidth() / 2,
 				this.getHeight() / 2
 		);
+	}
+
+	@Override
+	public void stopped() {
+		bgMusic.stop();
 	}
 }
