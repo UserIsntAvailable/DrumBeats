@@ -18,7 +18,7 @@ public class ScoreHandler implements Handler {
 	public ScoreHandler(World world) {
 		this.world = world;
 		this.scoreCounter = new Counter(50);
-		this.comboCounter = new Counter(50);
+		this.comboCounter = new Counter(40);
 		configure();
 	}
 	//endregion
@@ -64,8 +64,8 @@ public class ScoreHandler implements Handler {
 
 		world.addObject(
 				comboCounter,
-				world.getWidth() / 22,
-				(int) (world.getHeight() / 1.075)
+				(int) (world.getWidth() / 8.5),
+				(int) (world.getHeight() / 1.4)
 		);
 	}
 
