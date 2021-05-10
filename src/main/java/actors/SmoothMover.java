@@ -13,9 +13,12 @@ import greenfoot.Actor;
  * @version 3.0
  */
 public abstract class SmoothMover extends Actor {
+	//region Private Fields
 	private double exactX;
 	private double exactY;
-
+	//endregion
+	
+	//region Public Methods
 	/**
 	 * Move forward by the specified distance.
 	 * (Overrides the method in Actor).
@@ -68,4 +71,5 @@ public abstract class SmoothMover extends Actor {
 	public double getExactY() {
 		return exactY;
 	}
+	//endregion
 }

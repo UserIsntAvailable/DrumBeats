@@ -46,7 +46,7 @@ public class PlayField extends World {
 			if (noteModel.getTime() <= System.currentTimeMillis() - timeWhenStarted - NoteUtils.getNoteOffsetTime(noteModel)) {
 				this.addObject(
 						note,
-						(int) (this.getWidth() + NoteUtils.getNoteDiameter(noteModel) / 2),
+						this.getWidth() + NoteUtils.getNoteDiameter(noteModel) / 2,
 						config.getValue("ACTORS_Y_POSITION")
 				);
 				mapHandler.removeNextNote();

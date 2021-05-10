@@ -6,10 +6,13 @@ import models.NoteModel;
 import utils.NoteUtils;
 
 public class NoteActor extends SmoothMover {
+	//region Private Fields
 	private final NoteModel noteModel;
 	private static final Config config = Config.getInstance();
-
-	public NoteActor(int diameter, NoteModel noteModel) {
+	//endregion
+	
+	//region Constructor
+	public NoteActor( NoteModel noteModel) {
 		this.noteModel = noteModel;
 
 		// TODO - Set a different image depending in the taikoNote
@@ -17,7 +20,7 @@ public class NoteActor extends SmoothMover {
 		var noteColor = NoteUtils.getDrumType(noteModel).getColor();
 		switch (noteModel.getTaikoNote()) {
 			case CIRCLE:
-				setImage(ShapeDrawer.CircleWithoutText((int) NoteUtils.getNoteDiameter(noteModel), noteColor));
+				setImage(ShapeDrawer.CircleWithoutText(NoteUtils.getNoteDiameter(noteModel), noteColor));
 				break;
 			case SLIDER:
 				break;
@@ -25,7 +28,9 @@ public class NoteActor extends SmoothMover {
 				break;
 		}
 	}
-
+	//endregion
+	
+	//region Public Methods
 	@Override
 	public void act() {
 		this.move(
@@ -37,4 +42,5 @@ public class NoteActor extends SmoothMover {
 	public NoteModel getNoteModel() {
 		return this.noteModel;
 	}
+	//endregion
 }

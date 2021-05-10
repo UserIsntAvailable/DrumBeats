@@ -19,10 +19,10 @@ public class NoteUtils {
 		return note.getParams().split(",")[0].equals("1");
 	}
 
-	public static double getNoteDiameter(NoteModel note) {
+	public static int getNoteDiameter(NoteModel note) {
 		if (isBigNote(note)) {
-			return config.getValue(Integer.class, "NOTES_DIAMETER")
-					* config.getValue(Double.class, "BIG_NOTES_MULTIPLIER");
+			return (int) (config.getValue(Integer.class, "NOTES_DIAMETER")
+					* config.getValue(Double.class, "BIG_NOTES_MULTIPLIER"));
 		}
 		return config.getValue(Integer.class, "NOTES_DIAMETER");
 	}

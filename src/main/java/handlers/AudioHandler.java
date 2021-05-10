@@ -3,13 +3,18 @@ package handlers;
 import greenfoot.GreenfootSound;
 
 public class AudioHandler implements Handler {
+	//region Private Fields
 	private final GreenfootSound audio;
+	//endregion
 	
+	// region Constructor
 	public AudioHandler(String filepath) {
 		audio = new GreenfootSound(filepath);
 		configure();
 	}
+	//endregion
 
+	//region Handler
 	@Override
 	public long start() {
 		audio.play();
@@ -27,4 +32,5 @@ public class AudioHandler implements Handler {
 	public void close() {
 		audio.stop();
 	}
+	//endregion
 }

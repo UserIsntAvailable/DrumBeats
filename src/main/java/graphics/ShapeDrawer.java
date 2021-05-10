@@ -13,6 +13,7 @@ import java.awt.image.BufferedImage;
 
 // TODO - Outline for images
 public class ShapeDrawer {
+	//region Public Methods
 	public static GreenfootImage Rectangle(int width, int height, Color background, Text text) {
 		// TODO - Have rounded rectangles
 		GreenfootImage baseImage = new GreenfootImage(width, height);
@@ -40,7 +41,9 @@ public class ShapeDrawer {
 	public static GreenfootImage CircleWithoutText(int diameter, Color background) {
 		return Circle(diameter, background, Text.getDefault());
 	}
-
+	//endregion
+	
+	//region Private Methods
 	private static void SetTextOnImage(Text text, GreenfootImage image, int x, int y) {
 
 		var lines = GraphicsUtilities.splitLines(text.getText());
@@ -56,6 +59,7 @@ public class ShapeDrawer {
 		drawOutlinedText(g, dimensions, text.getTextColor(), text.getOutlineColor());
 		g.translate(-xDraw, -yDraw);
 	}
+	//endregion
 
 	//region Awt stuff ( Authors: Greenfoot developers, I needed to change some things though )
 	public static void drawOutlinedText(Graphics2D g, MultiLineStringDimensions d, java.awt.Color foreground, java.awt.Color outline) {

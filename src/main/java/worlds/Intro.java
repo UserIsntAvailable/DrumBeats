@@ -43,7 +43,8 @@ public class Intro extends World {
 		var gifFrame = gifImage.getCurrentImage();
 		if (gifFrame.equals(firstFrame) ||
 				Greenfoot.isKeyDown("space") ||
-				Greenfoot.mouseClicked(null)) {
+				Greenfoot.mouseClicked(null)
+		) {
 
 			Greenfoot.setWorld(Menu.getInstance());
 			return;

@@ -4,9 +4,6 @@ import enums.DrumType;
 import greenfoot.core.ImageCache;
 import javafx.util.Pair;
 
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 /**

@@ -8,15 +8,19 @@ import java.util.List;
 
 // Special thanks to Nenikitov ( one of my friends )
 public class KeyboardManager {
+	//region Private Fields
 	private static Config config = Config.getInstance();
-
 	private static final HashMap<String, Double> keysClickedTime = new HashMap<>();
 	private static final HashMap<String, Boolean> wereKeysReleased = new HashMap<>();
-
+	//endregion
+	
+	//region Constructor
 	public KeyboardManager(Config config) {
 		KeyboardManager.config = config;
 	}
-
+	//endregion
+	
+	//region Public Methods
 	public static boolean isKeyDown(String key) {
 		return isKeyDown(key, 32);
 	}
@@ -53,4 +57,5 @@ public class KeyboardManager {
 
 		return notesStates;
 	}
+	//endregion
 }

@@ -12,7 +12,9 @@ import utils.NoteUtils;
 import utils.SoundUtils;
 
 public class NoteCatcher extends Actor {
+	//region Private Fields
 	private static final Config config = Config.getInstance();
+	//endregion
 
 	//region Constructor
 	public NoteCatcher(int diameter) {

@@ -8,7 +8,6 @@ import java.util.Objects;
 
 public class NoteModel {
 	//region Private Fields
-
 	/**
 	 * Time when the object is to be hit, in milliseconds from the beginning of the map audio.
 	 */
