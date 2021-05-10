@@ -20,20 +20,20 @@ public class PlayFieldUIHandler implements Handler {
 	private final World world;
 	private final Config config = Config.getInstance();
 	//endregion
-	
+
 	//region Constructor
 	public PlayFieldUIHandler(World world) {
 		this.world = world;
 		configure();
 	}
 	//endregion
-	
+
 	//region Handler
 	public long start() {
 		addDesignActors();
 		addDrumsButtons();
-		
-		return System.nanoTime();
+
+		return System.currentTimeMillis();
 	}
 
 	public void configure() {
@@ -44,7 +44,7 @@ public class PlayFieldUIHandler implements Handler {
 	public void close() {
 	}
 	//endregion
-	
+
 	//region Private Methods
 	private void addDesignActors() {
 		// Notes rail
@@ -56,16 +56,17 @@ public class PlayFieldUIHandler implements Handler {
 				world.getWidth() / 2,
 				config.getValue("ACTORS_Y_POSITION")
 		);
-
+		
+		var noteCatcher = new NoteCatcher(config.getValue(Integer.class, "NOTES_DIAMETER") + 10);
 		world.addObject(
-				new NoteCatcher(config.getValue(Integer.class, "NOTES_DIAMETER") + 10),
+				noteCatcher,
 				config.getValue("NOTE_CATCHER_X_POSITION"),
 				config.getValue("ACTORS_Y_POSITION")
 		);
 	}
 
 	private void addDrumsButtons() {
-		var drumKeys = (List<Pair<DrumType,String>>)config.getValue("APP_DRUM_KEYS");		
+		var drumKeys = (List<Pair<DrumType, String>>) config.getValue("APP_DRUM_KEYS");
 
 		int xPosition = world.getWidth() / 18;
 		int width = world.getWidth() / 32;

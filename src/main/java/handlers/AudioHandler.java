@@ -19,7 +19,7 @@ public class AudioHandler implements Handler {
 	public long start() {
 		audio.play();
 		
-		return System.nanoTime();
+		return System.currentTimeMillis();
 	}
 
 	@Override

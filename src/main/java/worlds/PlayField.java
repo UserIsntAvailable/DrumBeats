@@ -14,7 +14,7 @@ import utils.WorldUtils;
  * Basically where the gameplay takes place.
  */
 public class PlayField extends World {
-	private final long timeWhenStarted;
+	private long timeWhenStarted;
 	private final MapHandler mapHandler;
 	private final PlayFieldUIHandler playFieldUIHandler;
 	private static final Config config = Config.getInstance();
@@ -32,9 +32,7 @@ public class PlayField extends World {
 		mapHandler = new MapHandler(map);
 		playFieldUIHandler = new PlayFieldUIHandler(this);
 
-		this.started();
-
-		timeWhenStarted = System.currentTimeMillis();
+		started();
 	}
 
 	@Override
@@ -57,8 +55,10 @@ public class PlayField extends World {
 	@Override
 	public void started() {
 		mapHandler.start();
-		playFieldUIHandler.start();
+		var st = playFieldUIHandler.start();
 		AppUtils.refreshLastFrameTime();
+
+		timeWhenStarted = st;
 	}
 
 	@Override
