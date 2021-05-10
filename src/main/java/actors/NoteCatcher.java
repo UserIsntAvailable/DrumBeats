@@ -1,19 +1,24 @@
 package actors;
 
 import IO.KeyboardManager;
-import core.Action;
 import core.Config;
+import events.NoteCatcherListener;
+import events.NoteEvent;
 import graphics.ShapeDrawer;
 import greenfoot.Actor;
 import greenfoot.Color;
 import models.NoteModel;
 import utils.ListUtils;
 import utils.NoteUtils;
-import utils.SoundUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NoteCatcher extends Actor {
 	//region Private Fields
 	private static final Config config = Config.getInstance();
+
+	private final List<NoteCatcherListener> noteCatcherListeners = new ArrayList<>();
 	//endregion
 
 	//region Constructor
@@ -30,12 +35,16 @@ public class NoteCatcher extends Actor {
 			var closestNote = noteActors.get(0);
 			if (this.intersects(closestNote)) {
 				if (!isNoteInMissArea(closestNote)) {
-					this.handleKeyStrokes(closestNote);
+					this.notifyKeystrokes(closestNote);
 					return;
 				}
-				this.removeNoteFromWorld(closestNote, SoundUtils::playMissSound);
+				fireNoteMissedEvent(new NoteEvent(closestNote));
 			}
 		}
+	}
+
+	public void addNoteCatcherListener(NoteCatcherListener listener) {
+		noteCatcherListeners.add(listener);
 	}
 	//endregion
 
@@ -55,8 +64,8 @@ public class NoteCatcher extends Actor {
 		return note.getExactX() + note.getImage().getWidth() / 1.5 <= this.getX();
 	}
 
-	private void handleKeyStrokes(NoteActor note) {
-		verifyKeyStates(note, getDrumKeyStates(note.getNoteModel()));
+	private void notifyKeystrokes(NoteActor note) {
+		notifyListeners(note, getDrumKeyStates(note.getNoteModel()));
 	}
 
 	private int getDrumKeyStates(NoteModel note) {
@@ -81,35 +90,31 @@ public class NoteCatcher extends Actor {
 		return goodKeysPressed;
 	}
 
-	private void verifyKeyStates(NoteActor note, int keyState) {
+	private void notifyListeners(NoteActor note, int keyState) {
 		switch (keyState) {
-			case 4:
-				// TODO - Handle spinners
-				break;
-			// Double notes are really hard to hit with both keys, I guess that shouldn't be a problem, right?
-			case 2:
+			case 4: // TODO - Handle spinners
+			case 2: // Double notes are really hard to hit with both keys, I guess that shouldn't be a problem, right?
 			case 1:
-				this.removeNoteFromWorld(note, () -> {
-					if (NoteUtils.isBigNote(note.getNoteModel())) {
-						SoundUtils.playSound(
-								"drum-big-notes-hitsound.wav",
-								config.getValue(Integer.class, "HITSOUNDS_BASE_VOLUME") + 10
-						);
-					}
-					// TODO - Show how precise the click was
-				});
+				fireNoteClickedEvent(new NoteEvent(note));
 				break;
 			case 0: // Just do nothing.
 				break;
 			case -1:
-				this.removeNoteFromWorld(note, SoundUtils::playMissSound);
+				fireNoteMissedEvent(new NoteEvent(note));
 				break;
 		}
 	}
 
-	private void removeNoteFromWorld(NoteActor note, Action action) {
-		this.getWorld().removeObject(note);
-		action.execute();
+	private void fireNoteClickedEvent(NoteEvent e) {
+		for (var l : noteCatcherListeners) {
+			l.noteClicked(e);
+		}
+	}
+
+	private void fireNoteMissedEvent(NoteEvent e) {
+		for (var l : noteCatcherListeners) {
+			l.noteMissed(e);
+		}
 	}
 	//endregion
 }

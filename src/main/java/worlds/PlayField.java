@@ -29,8 +29,8 @@ public class PlayField extends World {
 
 		this.setBackground(WorldUtils.createWorldBackground(Color.BLACK));
 
-		mapHandler = new MapHandler(map);
 		playFieldUIHandler = new PlayFieldUIHandler(this);
+		mapHandler = new MapHandler(map);
 	}
 
 	@Override

@@ -18,12 +18,14 @@ import java.util.List;
 public class PlayFieldUIHandler implements Handler {
 	//region Private Fields
 	private final World world;
+	private final NoteHandler noteHandler;
 	private final Config config = Config.getInstance();
 	//endregion
 
 	//region Constructor
 	public PlayFieldUIHandler(World world) {
 		this.world = world;
+		this.noteHandler = new NoteHandler();
 		configure();
 	}
 	//endregion
@@ -32,16 +34,19 @@ public class PlayFieldUIHandler implements Handler {
 	public long start() {
 		addDesignActors();
 		addDrumsButtons();
-
-		return System.currentTimeMillis();
+		return noteHandler.start();
 	}
 
 	public void configure() {
 		config.setValue("NOTE_CATCHER_X_POSITION", world.getWidth() / 4);
 		config.setValue("ACTORS_Y_POSITION", world.getHeight() / 2 + world.getHeight() / 20);
+		config.setValue("NOTES_DIAMETER", config.getValue(Integer.class, "APP_WIDTH") / 20);
+		config.setValue("BIG_NOTES_MULTIPLIER", config.getValue(Integer.class, "APP_WIDTH") / 1000.0);
+		config.setValue("NOTES_MOVEMENT_SPEED", config.getValue(Integer.class, "APP_WIDTH") / -5120.0);
 	}
 
 	public void close() {
+		noteHandler.close();
 	}
 	//endregion
 
@@ -56,10 +61,9 @@ public class PlayFieldUIHandler implements Handler {
 				world.getWidth() / 2,
 				config.getValue("ACTORS_Y_POSITION")
 		);
-		
-		var noteCatcher = new NoteCatcher(config.getValue(Integer.class, "NOTES_DIAMETER") + 10);
+
 		world.addObject(
-				noteCatcher,
+				new NoteCatcher(config.getValue(Integer.class, "NOTES_DIAMETER") + 10),
 				config.getValue("NOTE_CATCHER_X_POSITION"),
 				config.getValue("ACTORS_Y_POSITION")
 		);
