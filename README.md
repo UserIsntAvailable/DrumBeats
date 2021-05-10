@@ -4,8 +4,6 @@ A greenfoot version of [osu!](https://osu.ppy.sh/), [Taiko no Tatsujin](https://
 ## How to use
 Since I need to use [Greenfoot](https://www.greenfoot.org/door) in my project, you need to download Greenfoot to run the game.
 
-I will do a release with a proper project.greenfoot when the project will be done, for now you will need to set up your IDE/Gradle.
-
 ## Setup IDE/Gradle
 This project uses Java 11.0.2+9 you can find the download link [here](https://jdk.java.net/archive/).
 
