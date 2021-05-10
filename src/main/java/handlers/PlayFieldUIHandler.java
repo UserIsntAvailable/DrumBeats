@@ -19,6 +19,7 @@ public class PlayFieldUIHandler implements Handler {
 	//region Private Fields
 	private final World world;
 	private final NoteHandler noteHandler;
+	private final ScoreHandler scoreHandler;
 	private final Config config = Config.getInstance();
 	//endregion
 
@@ -26,6 +27,7 @@ public class PlayFieldUIHandler implements Handler {
 	public PlayFieldUIHandler(World world) {
 		this.world = world;
 		this.noteHandler = new NoteHandler();
+		this.scoreHandler = new ScoreHandler(world);
 		configure();
 	}
 	//endregion
@@ -34,6 +36,7 @@ public class PlayFieldUIHandler implements Handler {
 	public long start() {
 		addDesignActors();
 		addDrumsButtons();
+		scoreHandler.start();
 		return noteHandler.start();
 	}
 
@@ -41,8 +44,6 @@ public class PlayFieldUIHandler implements Handler {
 		config.setValue("NOTE_CATCHER_X_POSITION", world.getWidth() / 4);
 		config.setValue("ACTORS_Y_POSITION", world.getHeight() / 2 + world.getHeight() / 20);
 		config.setValue("NOTES_DIAMETER", config.getValue(Integer.class, "APP_WIDTH") / 20);
-		config.setValue("BIG_NOTES_MULTIPLIER", config.getValue(Integer.class, "APP_WIDTH") / 1000.0);
-		config.setValue("NOTES_MOVEMENT_SPEED", config.getValue(Integer.class, "APP_WIDTH") / -5120.0);
 	}
 
 	public void close() {

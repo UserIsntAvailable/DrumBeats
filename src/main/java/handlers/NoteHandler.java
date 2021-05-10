@@ -9,12 +9,17 @@ import utils.NoteUtils;
 import utils.SoundUtils;
 
 public class NoteHandler implements Handler {
+	//region Private Fields	
 	private final Config config = Config.getInstance();
-
+	//endregion
+	
+	//region Constructor
 	public NoteHandler() {
 		configure();
 	}
+	//endregion
 
+	//region Handler
 	@Override
 	public long start() {
 		var currentWorld = WorldHandler.getInstance().getWorld();
@@ -47,9 +52,12 @@ public class NoteHandler implements Handler {
 
 	@Override
 	public void configure() {
+		config.setValue("BIG_NOTES_MULTIPLIER", config.getValue(Integer.class, "APP_WIDTH") / 1000.0);
+		config.setValue("NOTES_MOVEMENT_SPEED", config.getValue(Integer.class, "APP_WIDTH") / -5120.0);
 	}
 
 	@Override
 	public void close() {
 	}
+	//endregion
 }

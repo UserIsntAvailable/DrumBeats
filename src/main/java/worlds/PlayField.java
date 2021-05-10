@@ -29,8 +29,8 @@ public class PlayField extends World {
 
 		this.setBackground(WorldUtils.createWorldBackground(Color.BLACK));
 
-		playFieldUIHandler = new PlayFieldUIHandler(this);
 		mapHandler = new MapHandler(map);
+		playFieldUIHandler = new PlayFieldUIHandler(this);
 	}
 
 	@Override
@@ -53,10 +53,10 @@ public class PlayField extends World {
 	@Override
 	public void started() {
 		mapHandler.start();
-		var st = playFieldUIHandler.start();
+		var startTime = playFieldUIHandler.start();
 		AppUtils.refreshLastFrameTime();
 
-		timeWhenStarted = st;
+		timeWhenStarted = startTime;
 	}
 
 	@Override
