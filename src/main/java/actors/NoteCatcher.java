@@ -38,7 +38,7 @@ public class NoteCatcher extends Actor {
 					this.notifyKeystrokes(closestNote);
 					return;
 				}
-				fireNoteMissedEvent(new NoteEvent(closestNote));
+				fireNoteMissedEvent(new NoteEvent(closestNote, 0));
 			}
 		}
 	}
@@ -91,17 +91,13 @@ public class NoteCatcher extends Actor {
 	}
 
 	private void notifyListeners(NoteActor note, int keyState) {
-		switch (keyState) {
-			case 4: // TODO - Handle spinners
-			case 2: // Double notes are really hard to hit with both keys, I guess that shouldn't be a problem, right?
-			case 1:
-				fireNoteClickedEvent(new NoteEvent(note));
-				break;
-			case 0: // Just do nothing.
-				break;
-			case -1:
-				fireNoteMissedEvent(new NoteEvent(note));
-				break;
+		if (keyState != 0) {
+			if (keyState > 0) {
+				fireNoteClickedEvent(new NoteEvent(note, keyState));
+			}
+			else {
+				fireNoteMissedEvent(new NoteEvent(note, keyState));
+			}
 		}
 	}
 
