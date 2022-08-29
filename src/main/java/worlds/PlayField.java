@@ -1,8 +1,10 @@
 package worlds;
 
+import IO.KeyboardManager;
 import core.Config;
 import greenfoot.Color;
 import greenfoot.World;
+import greenfoot.core.Simulation;
 import handlers.MapHandler;
 import handlers.PlayFieldUIHandler;
 import models.Map;
@@ -47,6 +49,9 @@ public class PlayField extends World {
 				);
 				mapHandler.removeNextNote();
 			}
+		}
+		if (KeyboardManager.isKeyDown("p")){
+			Simulation.getInstance().setEnabled(false);
 		}
 	}
 
